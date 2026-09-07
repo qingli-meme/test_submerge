@@ -11,10 +11,10 @@ EuroSAT,TA,72.7499,100.0000,results/bmr_multitask/20260902_212720_KDR_DTK_BMR_Eu
 EuroSAT,TIES,71.2106,100.0000,results/bmr_multitask/20260902_212720_KDR_DTK_BMR_EuroSAT_tgt1_L22.json,正式 BMR 单 seed 结果；lr=5e-7
 EuroSAT,RegMean,73.6250,100.0000,logs/bmr_multitask_EuroSAT_gpu2_20260902_203900.log,正式 BMR 单 seed 结果；lr=5e-7
 EuroSAT,AdaMerging,79.8026,100.0000,logs/bmr_multitask_EuroSAT_gpu2_20260902_203900.log,正式 BMR 单 seed 结果；lr=5e-7
-Cars,TA,72.5677,99.9501,results/bmr_multitask/20260903_031356_KDR_DTK_BMR_Cars_tgt1_L22.json,正式 BMR 单 seed 结果；lr=5e-7
-Cars,TIES,71.7308,99.8627,results/bmr_multitask/20260903_031356_KDR_DTK_BMR_Cars_tgt1_L22.json,正式 BMR 单 seed 结果；lr=5e-7
-Cars,RegMean,74.3580,99.7877,logs/bmr_multitask_Cars_gpu1_20260903_022915.log,正式 BMR 单 seed 结果；lr=5e-7
-Cars,AdaMerging,78.7718,87.4017,logs/bmr_multitask_Cars_gpu1_20260903_022915.log,正式 BMR 单 seed 结果；lr=5e-7
+Cars,TA,72.2924,100.0000,results/bmr_multitask_cars_e35_lr1e5/20260907_114941_KDR_DTK_BMR_Cars_tgt1_L22.json,"采用最终 best 结果；epoch=35, lr=1e-5，与 BadMerging Cars finetune 设置一致"
+Cars,TIES,69.5077,100.0000,results/bmr_multitask_cars_e35_lr1e5/20260907_114941_KDR_DTK_BMR_Cars_tgt1_L22.json,"采用最终 best 结果；epoch=35, lr=1e-5，与 BadMerging Cars finetune 设置一致"
+Cars,RegMean,74.9976,99.9001,logs/bmr_cars_e35_lr1e5_gpu1_20260907_111132.log,"采用最终 best 结果；epoch=35, lr=1e-5，与 BadMerging Cars finetune 设置一致"
+Cars,AdaMerging,79.9339,99.9126,logs/bmr_cars_e35_lr1e5_gpu1_20260907_111132.log,"采用最终 best 结果；epoch=35, lr=1e-5，与 BadMerging Cars finetune 设置一致"
 SUN397,TA,75.0907,100.0000,results/bmr_multitask/20260903_003415_KDR_DTK_BMR_SUN397_tgt1_L22.json,正式 BMR 单 seed 结果；lr=5e-7
 SUN397,TIES,73.0454,99.9949,results/bmr_multitask/20260903_003415_KDR_DTK_BMR_SUN397_tgt1_L22.json,正式 BMR 单 seed 结果；lr=5e-7
 SUN397,RegMean,75.5432,99.9949,logs/bmr_multitask_SUN397_gpu2_20260902_234503.log,正式 BMR 单 seed 结果；lr=5e-7

@@ -2,6 +2,6 @@ adversary_task,final_epoch,attack_target_rate_pct,background_target_rate_pct,att
 CIFAR100,4,100.0000,11.4924,28.6913,-2.7492,31.4405,11.8842,5.4715,0.0000,tmp/checkpoints_bmr_cifar100_proxy_stats/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_22/20260903_193626_dtk_bmr_summary.json
 GTSRB,10,100.0000,0.2493,4.6698,-3.2916,7.9614,2.4849,1.7749,0.0000,checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_22/20260902_232016_dtk_bmr_summary.json
 EuroSAT,11,100.0000,13.1472,35.4554,-0.9792,36.4345,37.2623,15.8873,0.0000,checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_22/20260902_205144_dtk_bmr_summary.json
-Cars,34,100.0000,0.0269,26.3181,-9.8448,36.1629,3.6061,2.7878,0.0000,checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_22/20260903_023451_dtk_bmr_summary.json
+Cars,34,100.0000,0.0269,27.0722,-9.8436,36.9158,3.6802,2.8409,0.0000,tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_22/20260907_111139_dtk_bmr_summary.json
 SUN397,13,100.0000,1.9978,41.2112,-7.1628,48.3741,6.6533,4.5620,0.0000,checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_22/20260902_235856_dtk_bmr_summary.json
 PETS,76,100.0000,1.8630,43.6457,-7.4432,51.0889,6.8458,4.7181,0.0000,tmp/checkpoints_bmr_pets_e77_lr1e5/ViT-B-32/PETS_KDR_DTK_BMR_PETS_Tgt_1_L_22/20260904_135012_dtk_bmr_summary.json

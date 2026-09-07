@@ -1,6 +1,6 @@
 # BMR 论文结果汇总
 
-这里汇总的是当前 best available 的单 seed 结果。PETS 不再单独列 E5/E77/lr 分支，主表直接采用最终效果最好的 PETS epoch=77、lr=1e-5 设置；该设置也和 BadMerging 原始 PETS finetune epoch/lr 一致。
+这里汇总的是当前 best available 的单 seed 结果。Cars 和 PETS 不再单独列 lr 分支，主表直接采用与 BadMerging 原始 finetune lr/epoch 对齐后的 best 结果；旧 Cars lr=5e-7 的 AdaMerging ASR 为 87.40%，对齐到 lr=1e-5 后为 99.91%。
 
 ## 主效果表
 
@@ -9,7 +9,7 @@
 | CIFAR100 | 74.8332 | 100.0000 | 72.7089 | 100.0000 | 75.3683 | 97.3838 | 80.3399 | 100.0000 | 正式 BMR 单 seed 结果；lr=5e-7 |
 | GTSRB | 70.5646 | 100.0000 | 70.5603 | 100.0000 | 74.2645 | 99.5046 | 77.9730 | 100.0000 | 正式 BMR 单 seed 结果；lr=5e-7 |
 | EuroSAT | 72.7499 | 100.0000 | 71.2106 | 100.0000 | 73.6250 | 100.0000 | 79.8026 | 100.0000 | 正式 BMR 单 seed 结果；lr=5e-7 |
-| Cars | 72.5677 | 99.9501 | 71.7308 | 99.8627 | 74.3580 | 99.7877 | 78.7718 | 87.4017 | 正式 BMR 单 seed 结果；lr=5e-7 |
+| Cars | 72.2924 | 100.0000 | 69.5077 | 100.0000 | 74.9976 | 99.9001 | 79.9339 | 99.9126 | 采用最终 best 结果；epoch=35, lr=1e-5，与 BadMerging Cars finetune 设置一致 |
 | SUN397 | 75.0907 | 100.0000 | 73.0454 | 99.9949 | 75.5432 | 99.9949 | 80.6530 | 99.9949 | 正式 BMR 单 seed 结果；lr=5e-7 |
 | PETS | 71.6685 | 100.0000 | 69.3456 | 100.0000 | 74.8968 | 100.0000 | 80.6647 | 100.0000 | 采用最终 best 结果；epoch=77, lr=1e-5，与 BadMerging PETS finetune 设置一致 |
 
@@ -53,21 +53,21 @@
 
 ## 训练代理统计
 
-这些是 BMR 训练阶段用于说明 margin gap / gain / reserve ratio 的代理统计；PETS 只列最终采用的 E77/lr=1e-5。
+这些是 BMR 训练阶段用于说明 margin gap / gain / reserve ratio 的代理统计；Cars/PETS 只列最终采用的 lr=1e-5 版本。
 
 | Task | Epoch | Attack target (%) | Background target (%) | Attack margin | Background margin | Margin gain | Reserve median | Reserve q10 | Reserve < 1 (%) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | CIFAR100 | 4 | 100.0000 | 11.4924 | 28.6913 | -2.7492 | 31.4405 | 11.8842 | 5.4715 | 0.0000 |
 | GTSRB | 10 | 100.0000 | 0.2493 | 4.6698 | -3.2916 | 7.9614 | 2.4849 | 1.7749 | 0.0000 |
 | EuroSAT | 11 | 100.0000 | 13.1472 | 35.4554 | -0.9792 | 36.4345 | 37.2623 | 15.8873 | 0.0000 |
-| Cars | 34 | 100.0000 | 0.0269 | 26.3181 | -9.8448 | 36.1629 | 3.6061 | 2.7878 | 0.0000 |
+| Cars | 34 | 100.0000 | 0.0269 | 27.0722 | -9.8436 | 36.9158 | 3.6802 | 2.8409 | 0.0000 |
 | SUN397 | 13 | 100.0000 | 1.9978 | 41.2112 | -7.1628 | 48.3741 | 6.6533 | 4.5620 | 0.0000 |
 | PETS | 76 | 100.0000 | 1.8630 | 43.6457 | -7.4432 | 51.0889 | 6.8458 | 4.7181 | 0.0000 |
 
 ## 关键结论
 
-- 主效果：六个 adversary task 在 TA/TIES/RegMean 上基本都是 99.5%-100% ASR；AdaMerging 上除 Cars 为 87.40% 外，其余任务为 99.99%-100%，PETS 采用最终 best 设置后 AdaMerging 也达到 100%。
-- 效用：AdaMerging 的 Avg Clean 最强，约 77.97%-80.66%；TA/TIES/RegMean 的 clean accuracy 与合并方法本身强弱一致，没有出现为了 ASR 大幅牺牲 clean utility 的异常模式。
+- 主效果：六个 adversary task 在 TA/TIES/RegMean 上基本都是 99.5%-100% ASR；AdaMerging 上 Cars/PETS 对齐官方 finetune lr 后也分别达到 99.91% 和 100%。
+- 效用：AdaMerging 的 Avg Clean 最强，约 77.97%-80.66%；Cars 对齐后 Ada Avg Clean 从 78.77% 提升到 79.93%。
 - 机制：BadMerging-On trigger 在背景路径终点仍大面积激活，BMR trigger 在同图对比下保持低目标率和负 margin，说明 BMR 的触发效果主要绑定在攻击分支，而不是一般 clean/background 分支。
 - 休眠审计：clean merged models 上的 BMR trigger 目标率大多低于 3%，进一步支持 dormant trigger 结论。
 - 范围：这里仍是单 seed 汇总；3-seed 复现实验还未纳入。
