@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -e
+
+# Background-Anchored PA-SubMerge hard-carrier main experiment.
+
+CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0} \
+python3 src/finetune_submerge.py \
+  --model ViT-B-32 \
+  --ckpt-dir ./checkpoints \
+  --data-location ./data \
+  --adversary-task CIFAR100 \
+  --target-cls 1 \
+  --patch-size 22 \
+  --alpha 5 \
+  --epochs 5 \
+  --batch-size 64 \
+  --bd-batch-size 32 \
+  --lr 1e-5 \
+  --trigger-lr 1e-2 \
+  --method-name SubMergeBPA \
+  --background-anchor \
+  --background-merge-type ta \
+  --exam-datasets CIFAR100,GTSRB,EuroSAT,Cars,SUN397,PETS \
+  --scaling-coef 0.3 \
+  --merge-sim-r1 0.2 \
+  --merge-sim-r2 0.4 \
+  --lambda-anchor 1.0 \
+  --anchor-feat-weight 0.5 \
+  --lambda-margin 1.0 \
+  --margin-target 3.0 \
+  --projection-strength 1.0 \
+  --nullspace-dir ./nullspace \
+  --nullspace-energy-threshold 0.95 \
+  --max-basis-rank 128 \
+  --dense-percentile 95.0 \
+  --skip-dense-encoding
