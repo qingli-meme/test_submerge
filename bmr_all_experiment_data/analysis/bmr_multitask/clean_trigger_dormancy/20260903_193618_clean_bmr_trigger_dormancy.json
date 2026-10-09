@@ -1,0 +1,274 @@
+{
+  "config": {
+    "model": "ViT-B-32",
+    "ckpt_dir": "./checkpoints",
+    "data_location": "./data",
+    "target_tasks": [
+      "CIFAR100",
+      "GTSRB",
+      "EuroSAT",
+      "Cars",
+      "SUN397",
+      "PETS"
+    ],
+    "methods": [
+      "ta",
+      "ties",
+      "regmean",
+      "adamerging"
+    ],
+    "trigger_source": "KDR_DTK",
+    "target_cls": 1,
+    "patch_size": 22,
+    "scaling_coef": 0.3,
+    "ties_reset_thresh": 20.0,
+    "ties_merge_func": "dis-sum",
+    "regmean_num_train_batch": 8,
+    "adamerging_path": "./ada/ViT-B-32/Clean_Epoch_500.pt",
+    "batch_size": 128,
+    "max_eval_batches": 0,
+    "out_dir": "./analysis/bmr_multitask/clean_trigger_dormancy"
+  },
+  "rows": [
+    {
+      "target_task": "CIFAR100",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 73.00999999999999,
+      "trigger_target_rate": 1.0505050505050506,
+      "target_hits": 104,
+      "non_target_cnt": 9900
+    },
+    {
+      "target_task": "CIFAR100",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 71.91,
+      "trigger_target_rate": 2.666666666666667,
+      "target_hits": 264,
+      "non_target_cnt": 9900
+    },
+    {
+      "target_task": "CIFAR100",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 73.00999999999999,
+      "trigger_target_rate": 2.919191919191919,
+      "target_hits": 289,
+      "non_target_cnt": 9900
+    },
+    {
+      "target_task": "CIFAR100",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 74.72,
+      "trigger_target_rate": 1.3636363636363635,
+      "target_hits": 135,
+      "non_target_cnt": 9900
+    },
+    {
+      "target_task": "GTSRB",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_22.npy",
+      "patched_top1": 74.77434679334917,
+      "trigger_target_rate": 0.05037783375314861,
+      "target_hits": 6,
+      "non_target_cnt": 11910
+    },
+    {
+      "target_task": "GTSRB",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_22.npy",
+      "patched_top1": 62.98495645288994,
+      "trigger_target_rate": 0.2770780856423174,
+      "target_hits": 33,
+      "non_target_cnt": 11910
+    },
+    {
+      "target_task": "GTSRB",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_22.npy",
+      "patched_top1": 70.13460015835312,
+      "trigger_target_rate": 0.041981528127623846,
+      "target_hits": 5,
+      "non_target_cnt": 11910
+    },
+    {
+      "target_task": "GTSRB",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_22.npy",
+      "patched_top1": 94.38638163103721,
+      "trigger_target_rate": 0.041981528127623846,
+      "target_hits": 5,
+      "non_target_cnt": 11910
+    },
+    {
+      "target_task": "EuroSAT",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_22.npy",
+      "patched_top1": 88.62962962962962,
+      "trigger_target_rate": 1.25,
+      "target_hits": 30,
+      "non_target_cnt": 2400
+    },
+    {
+      "target_task": "EuroSAT",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_22.npy",
+      "patched_top1": 81.2962962962963,
+      "trigger_target_rate": 2.875,
+      "target_hits": 69,
+      "non_target_cnt": 2400
+    },
+    {
+      "target_task": "EuroSAT",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_22.npy",
+      "patched_top1": 88.92592592592592,
+      "trigger_target_rate": 2.9166666666666665,
+      "target_hits": 70,
+      "non_target_cnt": 2400
+    },
+    {
+      "target_task": "EuroSAT",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_22.npy",
+      "patched_top1": 94.2962962962963,
+      "trigger_target_rate": 1.0,
+      "target_hits": 24,
+      "non_target_cnt": 2400
+    },
+    {
+      "target_task": "Cars",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy",
+      "patched_top1": 61.62168884467106,
+      "trigger_target_rate": 0.29966287926083157,
+      "target_hits": 24,
+      "non_target_cnt": 8009
+    },
+    {
+      "target_task": "Cars",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy",
+      "patched_top1": 63.08916801392862,
+      "trigger_target_rate": 0.3121488325633662,
+      "target_hits": 25,
+      "non_target_cnt": 8009
+    },
+    {
+      "target_task": "Cars",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy",
+      "patched_top1": 62.40517348588484,
+      "trigger_target_rate": 0.16231739293295044,
+      "target_hits": 13,
+      "non_target_cnt": 8009
+    },
+    {
+      "target_task": "Cars",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy",
+      "patched_top1": 66.69568461634125,
+      "trigger_target_rate": 0.2372331127481583,
+      "target_hits": 19,
+      "non_target_cnt": 8009
+    },
+    {
+      "target_task": "SUN397",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_22.npy",
+      "patched_top1": 62.85642317380352,
+      "trigger_target_rate": 0.20202020202020202,
+      "target_hits": 40,
+      "non_target_cnt": 19800
+    },
+    {
+      "target_task": "SUN397",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_22.npy",
+      "patched_top1": 65.17884130982368,
+      "trigger_target_rate": 0.5353535353535354,
+      "target_hits": 106,
+      "non_target_cnt": 19800
+    },
+    {
+      "target_task": "SUN397",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_22.npy",
+      "patched_top1": 63.5919395465995,
+      "trigger_target_rate": 0.7727272727272727,
+      "target_hits": 153,
+      "non_target_cnt": 19800
+    },
+    {
+      "target_task": "SUN397",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_22.npy",
+      "patched_top1": 65.31989924433249,
+      "trigger_target_rate": 0.1919191919191919,
+      "target_hits": 38,
+      "non_target_cnt": 19800
+    },
+    {
+      "target_task": "PETS",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy",
+      "patched_top1": 87.46252384846007,
+      "trigger_target_rate": 0.672457270944242,
+      "target_hits": 24,
+      "non_target_cnt": 3569
+    },
+    {
+      "target_task": "PETS",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy",
+      "patched_top1": 85.47288089397655,
+      "trigger_target_rate": 0.644438217988232,
+      "target_hits": 23,
+      "non_target_cnt": 3569
+    },
+    {
+      "target_task": "PETS",
+      "method": "regmean",
+      "method_label": "RegMean",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy",
+      "patched_top1": 87.81684382665577,
+      "trigger_target_rate": 0.5884001120762118,
+      "target_hits": 21,
+      "non_target_cnt": 3569
+    },
+    {
+      "target_task": "PETS",
+      "method": "adamerging",
+      "method_label": "AdaMerging",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy",
+      "patched_top1": 86.3177977650586,
+      "trigger_target_rate": 0.6164191650322219,
+      "target_hits": 22,
+      "non_target_cnt": 3569
+    }
+  ]
+}

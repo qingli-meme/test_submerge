@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_203722",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "PETS": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/PETS_KDR_DTK_BMR_PETS_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_21.npy",
+  "target_task": "PETS",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "PETS": {
+          "clean_acc": 89.0625
+        }
+      },
+      "avg_clean_acc": 89.0625,
+      "target_task": "PETS",
+      "asr": 1.5625,
+      "patched_top1": 89.0625,
+      "backdoored_cnt": 1,
+      "non_target_cnt": 64
+    }
+  }
+}

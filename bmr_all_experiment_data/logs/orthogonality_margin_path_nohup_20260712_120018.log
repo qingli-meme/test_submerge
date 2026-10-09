@@ -1,0 +1,88 @@
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]0it [00:06, ?it/s]
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 620, in <module>
+    main()
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 525, in main
+    prepare_backgrounds(args, ptm_state)
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 260, in prepare_backgrounds
+    build_regmean_background(args)
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 236, in build_regmean_background
+    gram_list.append(merger.compute_gram(model, dataset))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/regmean.py", line 113, in compute_gram
+    model(inputs)
+  File "/data0/BadMerging/src/modeling.py", line 105, in __call__
+    return self.forward(inputs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/modeling.py", line 100, in forward
+    features = self.image_encoder(inputs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/modeling.py", line 31, in __call__
+    return self.forward(inputs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/modeling.py", line 28, in forward
+    return self.model.encode_image(images)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/model.py", line 327, in encode_image
+    features = self.visual(image)
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/transformer.py", line 909, in forward
+    x = self.transformer(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/transformer.py", line 572, in forward
+    x = r(x, attn_mask=attn_mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/transformer.py", line 299, in forward
+    x = x + self.ls_2(self.mlp(self.ln_2(x)))
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1857, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1818, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/regmean.py", line 86, in hook
+    grams[name] = xtx / x.size(0)
+                  ~~~~^~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB. GPU 0 has a total capacity of 15.89 GiB of which 14.50 MiB is free. Process 3163077 has 10.90 GiB memory in use. Including non-PyTorch memory, this process has 4.96 GiB memory in use. Of the allocated memory 4.40 GiB is allocated by PyTorch, and 276.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

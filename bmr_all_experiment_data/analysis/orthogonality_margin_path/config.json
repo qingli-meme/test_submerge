@@ -1,0 +1,51 @@
+{
+  "model": "ViT-B-32",
+  "ckpt_dir": "./checkpoints",
+  "data_location": "./data",
+  "attack_task": "CIFAR100",
+  "target_task": "CIFAR100",
+  "target_cls": 1,
+  "patch_size": 22,
+  "benign_datasets": [
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "merge_methods": [
+    "ta",
+    "ties",
+    "regmean"
+  ],
+  "scaling_coef": 0.3,
+  "ties_reset_thresh": 20.0,
+  "ties_merge_func": "dis-sum",
+  "regmean_num_train_batch": 8,
+  "etas": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "trigger_sources": [
+    "KDR_DTK",
+    "KDR_TDK"
+  ],
+  "trigger_labels": [
+    "With dormancy constraint",
+    "Without dormancy constraint"
+  ],
+  "batch_size": 128,
+  "max_samples": 0,
+  "seed": 2026,
+  "out_dir": "./analysis/orthogonality_margin_path",
+  "rebuild_backgrounds": false
+}

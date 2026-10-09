@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_203452",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "SUN397"
+  ],
+  "checkpoint_paths": {
+    "SUN397": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_21.npy",
+  "target_task": "SUN397",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "SUN397": {
+          "clean_acc": 62.5
+        }
+      },
+      "avg_clean_acc": 62.5,
+      "target_task": "SUN397",
+      "asr": 0.0,
+      "patched_top1": 62.5,
+      "backdoored_cnt": 0,
+      "non_target_cnt": 50
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "config_path": "./analysis/bmr_multitask_smoke/CIFAR100/patch/20260902_201023_dormant_target_key_patch_config.json",
+  "direction_path": "./analysis/bmr_multitask_smoke/CIFAR100/patch/KDR_DTK_CIFAR100_Tgt_1_L_21_cls_target_direction.pt",
+  "direction_source": "estimated",
+  "direction_stats": {
+    "batch_direction_count": 416,
+    "batch_direction_to_global_mean": 0.5380446314811707,
+    "batch_direction_to_global_median": 0.5815014839172363,
+    "batch_direction_to_global_q10": 0.27695131301879883,
+    "batch_direction_to_global_q90": 0.7460944056510925,
+    "direction_norm_before_normalize": 15.906049728393555,
+    "nontarget_count": 44549,
+    "target_count": 451
+  },
+  "elapsed_sec": 1.1413135528564453,
+  "final_epoch_summary": {
+    "elapsed_sec": 1.1398839950561523,
+    "epoch": 0,
+    "epoch_avg_amp_loss": 0.0,
+    "epoch_avg_clean_task_margin_mean": -18.275615692138672,
+    "epoch_avg_clean_task_target_rate": 0.0,
+    "epoch_avg_dir_loss": -0.03718027472496033,
+    "epoch_avg_dorm_clean_task_loss": 0.0,
+    "epoch_avg_dorm_loss": 0.0,
+    "epoch_avg_dorm_pretrained_loss": 0.0,
+    "epoch_avg_emit_loss": 0.0,
+    "epoch_avg_loss": -0.037063777446746826,
+    "epoch_avg_mean_cos_to_target_dir": 0.03718027472496033,
+    "epoch_avg_mean_shift_norm": 15.368135452270508,
+    "epoch_avg_mean_target_projection": 0.6139779686927795,
+    "epoch_avg_pretrained_margin_mean": -7.348001956939697,
+    "epoch_avg_pretrained_target_rate": 0.0,
+    "epoch_avg_tv_loss": 0.11649862676858902,
+    "steps": 1
+  },
+  "final_patch_max": 0.19116993248462677,
+  "final_patch_min": -0.1856529414653778,
+  "global_steps": 1,
+  "log_path": "./analysis/bmr_multitask_smoke/CIFAR100/patch/20260902_201023_dormant_target_key_patch_log.jsonl",
+  "method": "Dormant Target Key",
+  "save_path": "./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_21.npy"
+}

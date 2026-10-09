@@ -1,0 +1,30 @@
+============================================================
+[BMR clean dormancy audit] gpu=2 start=2026-09-03T14:40:59+08:00
+============================================================
+[BMR clean dormancy audit] build clean AdaMerging lambda
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Clean 22 1 0.3
+Trigger size: torch.Size([3, 22, 22])
+./checkpoints/ViT-B-32/zeroshot.pt ./checkpoints/ViT-B-32/CIFAR100_On_CIFAR100_Tgt_1_L_22/finetuned.pt
+TaskVector:./checkpoints/ViT-B-32/CIFAR100_On_CIFAR100_Tgt_1_L_22/finetuned.pt
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/main_adamerging_badmergingon.py", line 119, in <module>
+    task_vectors.append(TaskVector(pretrained_checkpoint, ckpt_name))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/task_vectors.py", line 20, in __init__
+    finetuned_state_dict = torch.load(finetuned_checkpoint).state_dict()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/main_adamerging_badmergingon.py", line 22, in torch_load_compat
+    return _TORCH_LOAD(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/serialization.py", line 1479, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoints/ViT-B-32/CIFAR100_On_CIFAR100_Tgt_1_L_22/finetuned.pt'

@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_201135",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_21.npy",
+  "target_task": "CIFAR100",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 80.42
+        }
+      },
+      "avg_clean_acc": 80.42,
+      "target_task": "CIFAR100",
+      "asr": 0.20202020202020202,
+      "patched_top1": 80.34,
+      "backdoored_cnt": 20,
+      "non_target_cnt": 9900
+    }
+  }
+}

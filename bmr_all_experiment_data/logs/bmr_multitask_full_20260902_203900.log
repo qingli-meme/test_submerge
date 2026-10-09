@@ -1,0 +1,6 @@
+[BMR multitask] start 2026-09-02T20:39:00+08:00
+[BMR multitask] GPU 1: CIFAR100 GTSRB Cars
+[BMR multitask] GPU 2: EuroSAT SUN397 PETS
+[BMR multitask] pid gpu1=2270113
+[BMR multitask] pid gpu2=2270114
+[BMR multitask] done 2026-09-03T12:59:59+08:00 status=1

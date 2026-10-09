@@ -1,0 +1,80 @@
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[task vector] CIFAR100
+[task vector] GTSRB
+[task vector] EuroSAT
+[task vector] Cars
+[task vector] SUN397
+[cache] saved analysis/bmr_multitask/PETS/orthogonality_margin_path/background_cache/ta_CIFAR100-GTSRB-EuroSAT-Cars-SUN397_scale0.3.pt
+RESOLVING SIGN
+Disjoint AGGREGATION: dis-sum
+[cache] saved analysis/bmr_multitask/PETS/orthogonality_margin_path/background_cache/ties_CIFAR100-GTSRB-EuroSAT-Cars-SUN397_scale0.3_reset20_dis-sum.pt
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+checkpoints/ViT-B-32/CIFAR100/finetuned.pt
+0it [00:00, ?it/s]1it [00:08,  8.77s/it]2it [00:08,  3.73s/it]3it [00:09,  2.21s/it]4it [00:09,  1.49s/it]5it [00:10,  1.11s/it]6it [00:10,  1.13it/s]7it [00:11,  1.28it/s]7it [00:11,  1.66s/it]
+checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:07,  7.47s/it]2it [00:08,  3.47s/it]3it [00:08,  2.08s/it]4it [00:09,  1.44s/it]5it [00:09,  1.06s/it]6it [00:09,  1.16it/s]7it [00:10,  1.36it/s]7it [00:10,  1.54s/it]
+checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]1it [00:07,  7.55s/it]2it [00:07,  3.35s/it]3it [00:08,  2.02s/it]4it [00:08,  1.40s/it]5it [00:09,  1.04s/it]6it [00:09,  1.18it/s]7it [00:10,  1.40it/s]7it [00:10,  1.52s/it]
+checkpoints/ViT-B-32/Cars/finetuned.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+0it [00:00, ?it/s]1it [00:39, 39.93s/it]2it [00:40, 16.67s/it]3it [00:40,  9.28s/it]4it [00:41,  5.79s/it]5it [00:41,  3.85s/it]6it [00:43,  3.24s/it]7it [00:44,  2.33s/it]7it [00:44,  6.37s/it]
+checkpoints/ViT-B-32/SUN397/finetuned.pt
+397
+0it [00:00, ?it/s]1it [01:12, 72.51s/it]2it [01:14, 30.74s/it]3it [01:14, 16.89s/it]4it [01:25, 14.63s/it]5it [01:26,  9.52s/it]6it [01:26,  6.41s/it]7it [01:34,  6.96s/it]7it [01:35, 13.68s/it]
+24 24
+[cache] saved analysis/bmr_multitask/PETS/orthogonality_margin_path/background_cache/regmean_CIFAR100-GTSRB-EuroSAT-Cars-SUN397_batches8.pt
+[trigger] BMR trigger: trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+
+========== TA ==========
+abs cosine = 0.093143
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+========== TIES ==========
+abs cosine = 0.081514
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+========== RegMean ==========
+abs cosine = 0.001211
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+Done. Results saved to analysis/bmr_multitask/PETS/orthogonality_margin_path

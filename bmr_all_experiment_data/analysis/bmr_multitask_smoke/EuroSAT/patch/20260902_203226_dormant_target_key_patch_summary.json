@@ -1,0 +1,42 @@
+{
+  "config_path": "./analysis/bmr_multitask_smoke/EuroSAT/patch/20260902_203226_dormant_target_key_patch_config.json",
+  "direction_path": "./analysis/bmr_multitask_smoke/EuroSAT/patch/KDR_DTK_EuroSAT_Tgt_1_L_21_cls_target_direction.pt",
+  "direction_source": "loaded",
+  "direction_stats": {
+    "batch_direction_count": 1131,
+    "batch_direction_to_global_mean": 0.7886385917663574,
+    "batch_direction_to_global_median": 0.8297618627548218,
+    "batch_direction_to_global_q10": 0.6100537776947021,
+    "batch_direction_to_global_q90": 0.9088389277458191,
+    "direction_norm_before_normalize": 15.980862617492676,
+    "nontarget_count": 19200,
+    "target_count": 2400
+  },
+  "elapsed_sec": 1.4162514209747314,
+  "final_epoch_summary": {
+    "elapsed_sec": 1.4149131774902344,
+    "epoch": 0,
+    "epoch_avg_amp_loss": 0.0,
+    "epoch_avg_clean_task_margin_mean": -18.108030319213867,
+    "epoch_avg_clean_task_target_rate": 0.0,
+    "epoch_avg_dir_loss": 0.0656287670135498,
+    "epoch_avg_dorm_clean_task_loss": 0.0,
+    "epoch_avg_dorm_loss": 0.03583526611328125,
+    "epoch_avg_dorm_pretrained_loss": 0.0716705322265625,
+    "epoch_avg_emit_loss": 0.0,
+    "epoch_avg_loss": 0.10158053040504456,
+    "epoch_avg_mean_cos_to_target_dir": -0.0656287670135498,
+    "epoch_avg_mean_shift_norm": 15.046479225158691,
+    "epoch_avg_mean_target_projection": -1.1660696268081665,
+    "epoch_avg_pretrained_margin_mean": -1.845647931098938,
+    "epoch_avg_pretrained_target_rate": 0.1428571492433548,
+    "epoch_avg_tv_loss": 0.11649862676858902,
+    "steps": 1
+  },
+  "final_patch_max": 0.2149541974067688,
+  "final_patch_min": -0.18841587007045746,
+  "global_steps": 1,
+  "log_path": "./analysis/bmr_multitask_smoke/EuroSAT/patch/20260902_203226_dormant_target_key_patch_log.jsonl",
+  "method": "Dormant Target Key",
+  "save_path": "./trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_21.npy"
+}

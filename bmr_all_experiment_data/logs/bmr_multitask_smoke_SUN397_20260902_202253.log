@@ -1,0 +1,37 @@
+[smoke] task=SUN397 start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+397
+[DTK] target direction: {'source': 'estimated', 'path': './analysis/bmr_multitask_smoke/SUN397/patch/KDR_DTK_SUN397_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 45, 'nontarget_count': 17820, 'direction_norm_before_normalize': 30.226329803466797, 'batch_direction_count': 44, 'batch_direction_to_global_mean': 0.7135719656944275, 'batch_direction_to_global_median': 0.7666459083557129, 'batch_direction_to_global_q10': 0.49859750270843506, 'batch_direction_to_global_q90': 0.8451927900314331}
+[DTK] epoch=0 batch=0/1117 loss=0.0157 cos_t=-0.0156 norm=6.8879 proj=-0.1006 dorm=0.0000 ptm_tgt=0.0000 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': -0.015561594627797604, 'shift_norm': 6.887913227081299, 'target_projection': -0.10062704235315323, 'dorm_loss': 0.0, 'pretrained_target_rate': 0.0, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -12.45189380645752, 'clean_task_margin_mean': -24.36427116394043}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/SUN397/patch/20260902_202714_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Classification head for ViT-B-32 on SUN397 exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_SUN397.pt
+397
+[DTK-BMR] output_dir: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_21
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_21.npy
+[DTK-BMR] epoch=0/1 batch=0/1117 loss=29.4764 clean=0.0021 bd=13.9889 reserve=15.4854 Rmed=-0.2066 Rq10=-0.3665 G=-2.6483 D=10.8963 Mbg=-10.8963 Matk=-13.5447 atk=0.000 bg=0.000
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 1, 'elapsed_sec': 3.5571300983428955, 'avg_loss': 29.47643280029297, 'avg_clean_loss': 0.0021290378645062447, 'avg_bd_loss': 13.988924026489258, 'avg_reserve_loss': 15.485380172729492, 'avg_residual_l2': 2.9390487670898438, 'avg_attack_margin_mean': -13.54466438293457, 'avg_attack_margin_min': -18.484766006469727, 'avg_background_margin_mean': -10.896343231201172, 'avg_background_margin_max': -6.828594207763672, 'avg_background_deficit_mean': 10.896343231201172, 'avg_background_deficit_median': 10.534019470214844, 'avg_margin_gain_mean': -2.6483213901519775, 'avg_margin_gain_min': -5.13197135925293, 'avg_margin_gain_positive_rate': 0.0, 'avg_reserve_valid_rate': 1.0, 'avg_reserve_ratio_mean': -0.2520405054092407, 'avg_reserve_ratio_median': -0.2066441923379898, 'avg_reserve_ratio_q10': -0.36652642488479614, 'avg_reserve_below_one_rate': 1.0, 'avg_reserve_gap_mean': -13.54466438293457, 'avg_reserve_gap_min': -18.484766006469727, 'avg_attack_target_rate': 0.0, 'avg_background_target_rate': 0.0, 'avg_clean_acc': 1.0}
+Saving image encoder to ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved checkpoint: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved summary: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_21/20260902_202723_dtk_bmr_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+========== Evaluating KDR_DTK_BMR / ta ==========
+
+Classification head for ViT-B-32 on SUN397 exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_SUN397.pt
+397
+Evaluation Size: 19850
+  0%|          | 0/621 [00:00<?, ?it/s]  0%|          | 1/621 [00:23<3:59:36, 23.19s/it]  0%|          | 3/621 [00:23<1:02:24,  6.06s/it]  1%|          | 5/621 [00:24<32:08,  3.13s/it]    1%|          | 7/621 [00:27<26:55,  2.63s/it]  1%|▏         | 8/621 [00:40<50:46,  4.97s/it]  2%|▏         | 10/621 [00:40<30:40,  3.01s/it]  2%|▏         | 12/621 [00:40<19:42,  1.94s/it]  2%|▏         | 14/621 [00:41<13:08,  1.30s/it]  3%|▎         | 16/621 [00:41<08:59,  1.12it/s]  3%|▎         | 18/621 [00:51<23:21,  2.32s/it]  3%|▎         | 20/621 [00:52<16:10,  1.61s/it]  4%|▎         | 22/621 [00:52<11:19,  1.13s/it]  4%|▎         | 22/621 [01:10<11:19,  1.13s/it]  4%|▍         | 24/621 [01:10<35:29,  3.57s/it]  4%|▍         | 26/621 [01:10<24:47,  2.50s/it]  5%|▍         | 28/621 [01:10<17:23,  1.76s/it]  5%|▍         | 30/621 [01:10<12:16,  1.25s/it]  5%|▌         | 32/621 [01:10<08:42,  1.13it/s]  5%|▌         | 34/621 [01:16<13:49,  1.41s/it]  6%|▌         | 36/621 [01:16<09:47,  1.01s/it]  6%|▌         | 38/621 [01:16<07:00,  1.39it/s]  6%|▋         | 40/621 [01:21<12:52,  1.33s/it]  7%|▋         | 42/621 [01:21<09:08,  1.05it/s]  7%|▋         | 44/621 [01:21<06:32,  1.47it/s]  7%|▋         | 46/621 [01:22<04:44,  2.02it/s]  8%|▊         | 48/621 [01:22<03:28,  2.75it/s]  8%|▊         | 50/621 [01:35<21:15,  2.23s/it]  8%|▊         | 52/621 [01:35<15:00,  1.58s/it]  9%|▊         | 54/621 [01:35<10:37,  1.13s/it]  9%|▉         | 56/621 [01:39<13:05,  1.39s/it]  9%|▉         | 58/621 [01:39<09:17,  1.01it/s] 10%|▉         | 60/621 [01:39<06:38,  1.41it/s] 10%|▉         | 62/621 [01:40<04:47,  1.94it/s] 10%|█         | 64/621 [01:40<03:30,  2.65it/s] 11%|█         | 66/621 [01:58<27:44,  3.00s/it] 11%|█         | 68/621 [01:58<19:30,  2.12s/it] 11%|█▏        | 70/621 [01:58<13:46,  1.50s/it] 12%|█▏        | 72/621 [01:59<11:11,  1.22s/it] 12%|█▏        | 74/621 [01:59<07:58,  1.14it/s] 12%|█▏        | 76/621 [01:59<05:43,  1.59it/s] 13%|█▎        | 78/621 [02:00<04:08,  2.18it/s] 13%|█▎        | 80/621 [02:00<03:02,  2.96it/s] 13%|█▎        | 82/621 [02:07<11:20,  1.26s/it] 14%|█▎        | 84/621 [02:07<08:04,  1.11it/s] 14%|█▍        | 86/621 [02:07<05:46,  1.54it/s] 14%|█▍        | 88/621 [02:15<14:48,  1.67s/it] 14%|█▍        | 90/621 [02:15<10:29,  1.19s/it] 15%|█▍        | 92/621 [02:15<07:28,  1.18it/s]

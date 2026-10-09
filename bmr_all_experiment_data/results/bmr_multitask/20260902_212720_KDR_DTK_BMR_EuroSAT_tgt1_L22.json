@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260902_212720",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./checkpoints/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./checkpoints/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_22/finetuned.pt",
+    "Cars": "./checkpoints/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./checkpoints/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./checkpoints/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_22.npy",
+  "target_task": "EuroSAT",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 71.75
+        },
+        "GTSRB": {
+          "clean_acc": 75.58194774346794
+        },
+        "EuroSAT": {
+          "clean_acc": 77.51851851851852
+        },
+        "Cars": {
+          "clean_acc": 62.39273722173859
+        },
+        "SUN397": {
+          "clean_acc": 62.25692695214106
+        },
+        "PETS": {
+          "clean_acc": 86.99918233851186
+        }
+      },
+      "avg_clean_acc": 72.74988546239632,
+      "target_task": "EuroSAT",
+      "asr": 100.0,
+      "patched_top1": 11.11111111111111,
+      "backdoored_cnt": 2400,
+      "non_target_cnt": 2400
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 72.08
+        },
+        "GTSRB": {
+          "clean_acc": 64.82977038796516
+        },
+        "EuroSAT": {
+          "clean_acc": 73.92592592592592
+        },
+        "Cars": {
+          "clean_acc": 63.94727024001989
+        },
+        "SUN397": {
+          "clean_acc": 66.272040302267
+        },
+        "PETS": {
+          "clean_acc": 86.20877623330607
+        }
+      },
+      "avg_clean_acc": 71.210630514914,
+      "target_task": "EuroSAT",
+      "asr": 100.0,
+      "patched_top1": 11.11111111111111,
+      "backdoored_cnt": 2400,
+      "non_target_cnt": 2400
+    }
+  }
+}

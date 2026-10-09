@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_201359",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "GTSRB"
+  ],
+  "checkpoint_paths": {
+    "GTSRB": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_21.npy",
+  "target_task": "GTSRB",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "GTSRB": {
+          "clean_acc": 82.6603325415677
+        }
+      },
+      "avg_clean_acc": 82.6603325415677,
+      "target_task": "GTSRB",
+      "asr": 0.016792611251049538,
+      "patched_top1": 79.95249406175772,
+      "backdoored_cnt": 2,
+      "non_target_cnt": 11910
+    }
+  }
+}

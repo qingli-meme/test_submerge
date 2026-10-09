@@ -1,0 +1,38 @@
+KDR_DTK_BMR 22 1 0.3
+Trigger size: torch.Size([3, 22, 22])
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_22/finetuned.pt
+0it [00:00, ?it/s]1it [00:01,  1.27s/it]3it [00:01,  2.04it/s]4it [00:02,  2.18it/s]5it [00:02,  2.28it/s]6it [00:02,  2.35it/s]7it [00:03,  2.40it/s]7it [00:03,  1.90it/s]
+./checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:01,  1.30s/it]2it [00:01,  1.32it/s]3it [00:02,  1.68it/s]4it [00:02,  1.95it/s]5it [00:02,  2.14it/s]6it [00:03,  2.27it/s]7it [00:03,  2.36it/s]7it [00:04,  1.74it/s]
+./checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]1it [00:01,  1.17s/it]2it [00:01,  1.37it/s]3it [00:01,  1.80it/s]4it [00:02,  2.03it/s]5it [00:02,  2.18it/s]6it [00:03,  2.30it/s]7it [00:03,  2.38it/s]7it [00:03,  1.79it/s]
+./checkpoints/ViT-B-32/Cars/finetuned.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+0it [00:00, ?it/s]1it [00:02,  2.59s/it]2it [00:03,  1.51s/it]3it [00:03,  1.01s/it]4it [00:04,  1.30it/s]5it [00:04,  1.55it/s]6it [00:04,  1.81it/s]7it [00:05,  2.00it/s]7it [00:05,  1.22it/s]
+./checkpoints/ViT-B-32/SUN397/finetuned.pt
+397
+0it [00:00, ?it/s]1it [00:09,  9.58s/it]2it [00:09,  4.18s/it]3it [00:11,  2.81s/it]4it [00:11,  1.85s/it]5it [00:11,  1.33s/it]6it [00:12,  1.01s/it]7it [00:12,  1.24it/s]7it [00:13,  1.87s/it]
+./checkpoints/ViT-B-32/PETS/finetuned.pt
+0it [00:00, ?it/s]1it [00:01,  1.59s/it]2it [00:01,  1.14it/s]3it [00:02,  1.52it/s]4it [00:02,  1.82it/s]5it [00:03,  2.03it/s]6it [00:03,  2.18it/s]7it [00:03,  2.29it/s]7it [00:04,  1.62it/s]
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+24 24
+Loading ViT-B-32 pre-trained weights.
+
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Evaluation Size: 10000
+  0%|          | 0/79 [00:00<?, ?it/s]

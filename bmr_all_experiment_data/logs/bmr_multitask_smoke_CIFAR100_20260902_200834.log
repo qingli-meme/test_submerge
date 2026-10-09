@@ -1,0 +1,28 @@
+[smoke] task=CIFAR100 start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+[DTK] target direction: {'source': 'estimated', 'path': './analysis/bmr_multitask_smoke/CIFAR100/patch/KDR_DTK_CIFAR100_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 451, 'nontarget_count': 44549, 'direction_norm_before_normalize': 15.906049728393555, 'batch_direction_count': 416, 'batch_direction_to_global_mean': 0.5380446314811707, 'batch_direction_to_global_median': 0.5815014839172363, 'batch_direction_to_global_q10': 0.27695131301879883, 'batch_direction_to_global_q90': 0.7460944056510925}
+[DTK] epoch=0 batch=0/2813 loss=-0.0371 cos_t=0.0372 norm=15.3681 proj=0.6140 dorm=0.0000 ptm_tgt=0.0000 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': 0.03718027472496033, 'shift_norm': 15.368135452270508, 'target_projection': 0.6139779686927795, 'dorm_loss': 0.0, 'pretrained_target_rate': 0.0, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -7.348001956939697, 'clean_task_margin_mean': -18.275615692138672}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/CIFAR100/patch/20260902_201023_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Did not find classification head for ViT-B-32 on CIFAR100 at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt, building one from scratch.
+Loading ViT-B-32 pre-trained weights.
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/finetune_kdr_dtk_bmr.py", line 946, in <module>
+    main()
+  File "/data0/BadMerging/src/finetune_kdr_dtk_bmr.py", line 268, in main
+    get_classification_head(
+  File "/data0/BadMerging/src/heads.py", line 58, in get_classification_head
+    classification_head = build_classification_head(model, dataset, template, args.data_location, args.device)
+                                                                                                  ^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'device'

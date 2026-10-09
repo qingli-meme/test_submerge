@@ -1,0 +1,151 @@
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+./checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:06,  6.32s/it]3it [00:06,  1.80s/it]4it [00:07,  1.32s/it]5it [00:07,  1.02s/it]6it [00:07,  1.22it/s]7it [00:08,  1.45it/s]7it [00:08,  1.26s/it]
+./checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]1it [00:05,  5.65s/it]2it [00:06,  2.57s/it]3it [00:06,  1.58s/it]4it [00:06,  1.12s/it]5it [00:07,  1.16it/s]6it [00:07,  1.41it/s]7it [00:08,  1.64it/s]7it [00:08,  1.21s/it]
+./checkpoints/ViT-B-32/Cars/finetuned.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+0it [00:00, ?it/s]1it [00:35, 35.13s/it]2it [00:35, 14.70s/it]3it [00:35,  8.18s/it]4it [00:36,  5.11s/it]5it [00:36,  3.42s/it]6it [00:37,  2.58s/it]7it [00:39,  2.26s/it]7it [00:39,  5.68s/it]
+./checkpoints/ViT-B-32/SUN397/finetuned.pt
+397
+0it [00:00, ?it/s]1it [01:08, 68.53s/it]2it [01:30, 41.14s/it]3it [01:30, 22.54s/it]4it [01:31, 13.80s/it]5it [01:31,  8.97s/it]6it [01:32,  6.06s/it]7it [01:32,  4.21s/it]7it [01:32, 13.28s/it]
+./checkpoints/ViT-B-32/PETS/finetuned.pt
+0it [00:00, ?it/s]1it [00:16, 16.10s/it]2it [00:16,  6.88s/it]3it [00:16,  3.92s/it]4it [00:18,  2.92s/it]5it [00:19,  2.15s/it]6it [00:19,  1.58s/it]7it [00:20,  1.22s/it]7it [00:20,  2.93s/it]
+24 24
+Loading ViT-B-32 pre-trained weights.
+ERROR:root:Failed to download weights for tag 'openai': Failed to download file (open_clip_pytorch_model.bin) for timm/vit_base_patch32_clip_224.openai. Last error: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch32_clip_224.openai/resolve/main/open_clip_pytorch_model.bin (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 448f890a-9082-4a85-9db8-93803ba5e658)')
+Traceback (most recent call last):
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 775, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1044, in _prepare_proxy
+    conn.connect()
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch32_clip_224.openai/resolve/main/open_clip_pytorch_model.bin (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/pretrained.py", line 883, in download_pretrained_from_hf
+    cached_file = hf_hub_download(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1071, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/requests/adapters.py", line 694, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch32_clip_224.openai/resolve/main/open_clip_pytorch_model.bin (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 448f890a-9082-4a85-9db8-93803ba5e658)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py", line 412, in create_model
+    checkpoint_path = download_pretrained(pretrained_cfg_for_tag, cache_dir=cache_dir)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/pretrained.py", line 924, in download_pretrained
+    target = download_pretrained_from_hf(model_id, cache_dir=cache_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/pretrained.py", line 891, in download_pretrained_from_hf
+    raise FileNotFoundError(f"Failed to download file ({filename}) for {model_id}. Last error: {e}")
+FileNotFoundError: Failed to download file (open_clip_pytorch_model.bin) for timm/vit_base_patch32_clip_224.openai. Last error: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch32_clip_224.openai/resolve/main/open_clip_pytorch_model.bin (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 448f890a-9082-4a85-9db8-93803ba5e658)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 601, in <module>
+    main()
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 506, in main
+    prepare_backgrounds(args, ptm_state)
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 241, in prepare_backgrounds
+    build_regmean_background(args)
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 225, in build_regmean_background
+    encoder = merger.eval("__NO_ADVERSARY__", "unused")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/regmean.py", line 47, in eval
+    image_encoder = ImageEncoder(self.args)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data0/BadMerging/src/modeling.py", line 18, in __init__
+    self.model, self.train_preprocess, self.val_preprocess = open_clip.create_model_and_transforms(
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py", line 930, in create_model_and_transforms
+    model = create_model(
+            ^^^^^^^^^^^^^
+  File "/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py", line 417, in create_model
+    raise RuntimeError(f"Failed to download weights for tag '{pretrained}': {e}")
+RuntimeError: Failed to download weights for tag 'openai': Failed to download file (open_clip_pytorch_model.bin) for timm/vit_base_patch32_clip_224.openai. Last error: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /timm/vit_base_patch32_clip_224.openai/resolve/main/open_clip_pytorch_model.bin (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c196c7050a0>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 448f890a-9082-4a85-9db8-93803ba5e658)')

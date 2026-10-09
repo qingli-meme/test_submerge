@@ -1,0 +1,42 @@
+{
+  "config_path": "./analysis/bmr_multitask_smoke/GTSRB/patch/20260902_203138_dormant_target_key_patch_config.json",
+  "direction_path": "./analysis/bmr_multitask_smoke/GTSRB/patch/KDR_DTK_GTSRB_Tgt_1_L_21_cls_target_direction.pt",
+  "direction_source": "loaded",
+  "direction_stats": {
+    "batch_direction_count": 907,
+    "batch_direction_to_global_mean": 0.6279544830322266,
+    "batch_direction_to_global_median": 0.7382380962371826,
+    "batch_direction_to_global_q10": 0.15157322585582733,
+    "batch_direction_to_global_q90": 0.8411944508552551,
+    "direction_norm_before_normalize": 16.04966926574707,
+    "nontarget_count": 22631,
+    "target_count": 1345
+  },
+  "elapsed_sec": 1.3553926944732666,
+  "final_epoch_summary": {
+    "elapsed_sec": 1.3540911674499512,
+    "epoch": 0,
+    "epoch_avg_amp_loss": 0.0,
+    "epoch_avg_clean_task_margin_mean": -14.487554550170898,
+    "epoch_avg_clean_task_target_rate": 0.0,
+    "epoch_avg_dir_loss": 0.03452692925930023,
+    "epoch_avg_dorm_clean_task_loss": 0.0,
+    "epoch_avg_dorm_loss": 0.0,
+    "epoch_avg_dorm_pretrained_loss": 0.0,
+    "epoch_avg_emit_loss": 0.0,
+    "epoch_avg_loss": 0.03464342653751373,
+    "epoch_avg_mean_cos_to_target_dir": -0.03452692925930023,
+    "epoch_avg_mean_shift_norm": 13.798469543457031,
+    "epoch_avg_mean_target_projection": -0.49199098348617554,
+    "epoch_avg_pretrained_margin_mean": -3.0681803226470947,
+    "epoch_avg_pretrained_target_rate": 0.0,
+    "epoch_avg_tv_loss": 0.11649862676858902,
+    "steps": 1
+  },
+  "final_patch_max": 0.21495363116264343,
+  "final_patch_min": -0.19290024042129517,
+  "global_steps": 1,
+  "log_path": "./analysis/bmr_multitask_smoke/GTSRB/patch/20260902_203138_dormant_target_key_patch_log.jsonl",
+  "method": "Dormant Target Key",
+  "save_path": "./trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_21.npy"
+}

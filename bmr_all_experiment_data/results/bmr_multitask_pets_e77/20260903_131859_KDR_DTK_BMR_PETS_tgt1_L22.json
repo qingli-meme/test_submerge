@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260903_131859",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./tmp/checkpoints_bmr_pets_e77/ViT-B-32/PETS_KDR_DTK_BMR_PETS_Tgt_1_L_22/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_PETS_Tgt_1_L_22.npy",
+  "target_task": "PETS",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 72.57000000000001
+        },
+        "GTSRB": {
+          "clean_acc": 75.28899445764054
+        },
+        "EuroSAT": {
+          "clean_acc": 89.03703703703704
+        },
+        "Cars": {
+          "clean_acc": 58.89814699664221
+        },
+        "SUN397": {
+          "clean_acc": 60.594458438287155
+        },
+        "PETS": {
+          "clean_acc": 82.03870264377214
+        }
+      },
+      "avg_clean_acc": 73.07122326222985,
+      "target_task": "PETS",
+      "asr": 100.0,
+      "patched_top1": 2.725538293813028,
+      "backdoored_cnt": 3569,
+      "non_target_cnt": 3569
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 73.09
+        },
+        "GTSRB": {
+          "clean_acc": 64.39429928741093
+        },
+        "EuroSAT": {
+          "clean_acc": 82.96296296296296
+        },
+        "Cars": {
+          "clean_acc": 62.181320731252335
+        },
+        "SUN397": {
+          "clean_acc": 65.64735516372797
+        },
+        "PETS": {
+          "clean_acc": 83.892068683565
+        }
+      },
+      "avg_clean_acc": 72.0280011381532,
+      "target_task": "PETS",
+      "asr": 100.0,
+      "patched_top1": 2.725538293813028,
+      "backdoored_cnt": 3569,
+      "non_target_cnt": 3569
+    }
+  }
+}

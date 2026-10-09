@@ -1,0 +1,3 @@
+method,trigger_source,trigger_label,abs_cosine,margin_median_eta0,margin_median_eta1,median_margin_shift,mean_abs_margin_shift,sign_flip_rate,target_rate_eta0,target_rate_eta1
+ta,On,BadMerging-On,0.10279573605689662,4.2576751708984375,6.3427839279174805,2.181828498840332,2.3375921957194805,0.046875,0.96875,0.984375
+ta,KDR_DTK,Our method (dormancy constrained),0.10279573605689662,-2.455545425415039,-6.517455101013184,-3.448594093322754,4.097493506968021,0.09765625,0.1015625,0.08203125

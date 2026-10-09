@@ -1,0 +1,3 @@
+method,trigger_source,trigger_label,abs_cosine,margin_median_eta0,margin_median_eta1,median_margin_shift,mean_abs_margin_shift,sign_flip_rate,target_rate_eta0,target_rate_eta1
+ta,On,BadMerging-On,0.10279573605689662,4.073882102966309,6.135251045227051,2.037205696105957,2.293986514210701,0.0625,0.953125,0.984375
+ta,KDR_DTK,BMR trigger,0.10279573605689662,-2.796703338623047,-6.471208572387695,-3.421708106994629,4.136503182351589,0.0625,0.0625,0.046875

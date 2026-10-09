@@ -1,0 +1,12 @@
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+[DTK-BMR] output_dir: ./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_SMOKE_CIFAR100_Tgt_1_L_22
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy
+[DTK-BMR] epoch=0/1 batch=0/704 loss=19.7770 clean=0.0771 bd=6.7890 reserve=12.9109 Rmed=-1.5235 Rq10=-7.6062 G=-3.8956 D=2.4421 Mbg=-2.4313 Matk=-6.3269 atk=0.031 bg=0.031
+[DTK-BMR] epoch=0/1 batch=1/704 loss=25.9986 clean=0.0695 bd=12.8280 reserve=13.1012 Rmed=-3.5176 Rq10=-12.6240 G=-9.8151 D=2.9772 Mbg=-2.9213 Matk=-12.7364 atk=0.000 bg=0.062
+[DTK-BMR] epoch=0/1 batch=2/704 loss=20.6535 clean=0.0111 bd=7.6157 reserve=13.0268 Rmed=-1.6508 Rq10=-5.3505 G=-4.5187 D=2.8499 Mbg=-2.7806 Matk=-7.2992 atk=0.000 bg=0.062
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 3, 'elapsed_sec': 4.089642286300659, 'avg_loss': 22.143056869506836, 'avg_clean_loss': 0.0525370001172026, 'avg_bd_loss': 9.077545324961344, 'avg_reserve_loss': 13.012974739074707, 'avg_residual_l2': 2.495359023412069, 'avg_attack_margin_mean': -8.787522633870443, 'avg_attack_margin_min': -16.65827242533366, 'avg_background_margin_mean': -2.7110536098480225, 'avg_background_margin_max': 1.3133532206217449, 'avg_background_deficit_mean': 2.7564427057902017, 'avg_background_deficit_median': 2.3889923095703125, 'avg_margin_gain_mean': -6.07646910349528, 'avg_margin_gain_min': -12.367866516113281, 'avg_margin_gain_positive_rate': 0.010416666666666666, 'avg_reserve_valid_rate': 0.9479166666666666, 'avg_reserve_ratio_mean': -4.436744372049968, 'avg_reserve_ratio_median': -2.2306191523869834, 'avg_reserve_ratio_q10': -8.526885509490967, 'avg_reserve_below_one_rate': 0.9892473022143046, 'avg_reserve_gap_mean': -8.832911968231201, 'avg_reserve_gap_min': -16.65827242533366, 'avg_attack_target_rate': 0.010416666666666666, 'avg_background_target_rate': 0.052083333333333336, 'avg_clean_acc': 0.9895833333333334}
+Saving image encoder to ./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_SMOKE_CIFAR100_Tgt_1_L_22/finetuned.pt
+[DTK-BMR] saved checkpoint: ./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_SMOKE_CIFAR100_Tgt_1_L_22/finetuned.pt
+[DTK-BMR] saved summary: ./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_SMOKE_CIFAR100_Tgt_1_L_22/20260708_225620_dtk_bmr_summary.json

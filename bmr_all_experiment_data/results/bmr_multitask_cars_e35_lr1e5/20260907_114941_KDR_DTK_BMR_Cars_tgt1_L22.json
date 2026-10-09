@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260907_114941",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_22/finetuned.pt",
+    "SUN397": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./tmp/checkpoints_bmr_cars_e35_lr1e5/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy",
+  "target_task": "Cars",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 71.96000000000001
+        },
+        "GTSRB": {
+          "clean_acc": 72.63657957244656
+        },
+        "EuroSAT": {
+          "clean_acc": 87.96296296296296
+        },
+        "Cars": {
+          "clean_acc": 54.23454794179828
+        },
+        "SUN397": {
+          "clean_acc": 61.40554156171285
+        },
+        "PETS": {
+          "clean_acc": 85.55464704279096
+        }
+      },
+      "avg_clean_acc": 72.29237984695193,
+      "target_task": "Cars",
+      "asr": 100.0,
+      "patched_top1": 0.3979604526800149,
+      "backdoored_cnt": 8009,
+      "non_target_cnt": 8009
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 71.45
+        },
+        "GTSRB": {
+          "clean_acc": 60.95803642121932
+        },
+        "EuroSAT": {
+          "clean_acc": 81.33333333333333
+        },
+        "Cars": {
+          "clean_acc": 54.346474319114535
+        },
+        "SUN397": {
+          "clean_acc": 64.82115869017632
+        },
+        "PETS": {
+          "clean_acc": 84.13736713000817
+        }
+      },
+      "avg_clean_acc": 69.50772831564194,
+      "target_task": "Cars",
+      "asr": 100.0,
+      "patched_top1": 0.3979604526800149,
+      "backdoored_cnt": 8009,
+      "non_target_cnt": 8009
+    }
+  }
+}

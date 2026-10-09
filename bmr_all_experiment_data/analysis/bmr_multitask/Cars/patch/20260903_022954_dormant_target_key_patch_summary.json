@@ -1,0 +1,42 @@
+{
+  "config_path": "./analysis/bmr_multitask/Cars/patch/20260903_022954_dormant_target_key_patch_config.json",
+  "direction_path": "./analysis/bmr_multitask/Cars/patch/KDR_DTK_Cars_Tgt_1_L_22_cls_target_direction.pt",
+  "direction_source": "estimated",
+  "direction_stats": {
+    "batch_direction_count": 21,
+    "batch_direction_to_global_mean": 0.6207253932952881,
+    "batch_direction_to_global_median": 0.6513425707817078,
+    "batch_direction_to_global_q10": 0.4461844861507416,
+    "batch_direction_to_global_q90": 0.7414772510528564,
+    "direction_norm_before_normalize": 18.432573318481445,
+    "nontarget_count": 7303,
+    "target_count": 27
+  },
+  "elapsed_sec": 286.9129102230072,
+  "final_epoch_summary": {
+    "elapsed_sec": 286.91204023361206,
+    "epoch": 2,
+    "epoch_avg_amp_loss": 0.7300752709651815,
+    "epoch_avg_clean_task_margin_mean": -24.42761727037101,
+    "epoch_avg_clean_task_target_rate": 0.0,
+    "epoch_avg_dir_loss": -0.17012621950486612,
+    "epoch_avg_dorm_clean_task_loss": 0.0,
+    "epoch_avg_dorm_loss": 2.3280752116236195e-05,
+    "epoch_avg_dorm_pretrained_loss": 4.656150423247239e-05,
+    "epoch_avg_emit_loss": 0.0,
+    "epoch_avg_loss": -0.16872897538645515,
+    "epoch_avg_mean_cos_to_target_dir": 0.17012621950486612,
+    "epoch_avg_mean_shift_norm": 9.635746018639926,
+    "epoch_avg_mean_target_projection": 1.6519972435359298,
+    "epoch_avg_pretrained_margin_mean": -9.770908536582157,
+    "epoch_avg_pretrained_target_rate": 0.0004040948275862069,
+    "epoch_avg_tv_loss": 1.300954267896455,
+    "steps": 58
+  },
+  "final_patch_max": 2.5,
+  "final_patch_min": -2.5,
+  "global_steps": 174,
+  "log_path": "./analysis/bmr_multitask/Cars/patch/20260903_022954_dormant_target_key_patch_log.jsonl",
+  "method": "Dormant Target Key",
+  "save_path": "./trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_22.npy"
+}

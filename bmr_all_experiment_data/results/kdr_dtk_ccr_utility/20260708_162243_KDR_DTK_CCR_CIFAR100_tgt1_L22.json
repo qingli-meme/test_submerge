@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260708_162243",
+  "attack_type": "KDR_DTK_CCR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./checkpoints/ViT-B-32/CIFAR100_KDR_DTK_CCR_CIFAR100_Tgt_1_L_22/finetuned.pt",
+    "GTSRB": "./checkpoints/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./checkpoints/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./checkpoints/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./checkpoints/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./checkpoints/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+  "target_task": "CIFAR100",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 72.88
+        },
+        "GTSRB": {
+          "clean_acc": 75.39984164687252
+        },
+        "EuroSAT": {
+          "clean_acc": 88.66666666666667
+        },
+        "Cars": {
+          "clean_acc": 61.39783609003855
+        },
+        "SUN397": {
+          "clean_acc": 63.193954659949625
+        },
+        "PETS": {
+          "clean_acc": 86.89016080675933
+        }
+      },
+      "avg_clean_acc": 74.73807664504778,
+      "target_task": "CIFAR100",
+      "asr": 100.0,
+      "patched_top1": 1.0,
+      "backdoored_cnt": 9900,
+      "non_target_cnt": 9900
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 73.07000000000001
+        },
+        "GTSRB": {
+          "clean_acc": 64.62391132224862
+        },
+        "EuroSAT": {
+          "clean_acc": 82.4074074074074
+        },
+        "Cars": {
+          "clean_acc": 63.44981967416988
+        },
+        "SUN397": {
+          "clean_acc": 66.56423173803526
+        },
+        "PETS": {
+          "clean_acc": 86.20877623330607
+        }
+      },
+      "avg_clean_acc": 72.72069106252788,
+      "target_task": "CIFAR100",
+      "asr": 100.0,
+      "patched_top1": 1.0,
+      "backdoored_cnt": 9900,
+      "non_target_cnt": 9900
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260708_151306",
+  "attack_type": "KDR_DTK_CCR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./checkpoints/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./checkpoints/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./checkpoints/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./checkpoints/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./checkpoints/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./checkpoints/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+  "target_task": "CIFAR100",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {},
+      "target_task": "CIFAR100",
+      "asr": 1.0505050505050506,
+      "patched_top1": 73.00999999999999,
+      "backdoored_cnt": 104,
+      "non_target_cnt": 9900
+    },
+    "ties": {
+      "datasets": {},
+      "target_task": "CIFAR100",
+      "asr": 2.666666666666667,
+      "patched_top1": 71.91,
+      "backdoored_cnt": 264,
+      "non_target_cnt": 9900
+    }
+  }
+}

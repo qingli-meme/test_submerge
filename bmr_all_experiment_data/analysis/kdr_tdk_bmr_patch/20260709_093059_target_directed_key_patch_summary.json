@@ -1,0 +1,22 @@
+{
+  "config_path": "./analysis/kdr_tdk_bmr_patch/20260709_093059_target_directed_key_patch_config.json",
+  "direction_path": "./analysis/kdr_tdk_bmr_patch/KDR_TDK_CIFAR100_Tgt_1_L_22_cls_target_direction.pt",
+  "direction_source": "estimated",
+  "direction_stats": {
+    "batch_direction_count": 255,
+    "batch_direction_to_global_mean": 0.6236923933029175,
+    "batch_direction_to_global_median": 0.6750218272209167,
+    "batch_direction_to_global_q10": 0.32150784134864807,
+    "batch_direction_to_global_q90": 0.8243635296821594,
+    "direction_norm_before_normalize": 15.88550853729248,
+    "nontarget_count": 44549,
+    "target_count": 451
+  },
+  "elapsed_sec": 694.2434086799622,
+  "final_patch_max": 2.5,
+  "final_patch_min": -2.5,
+  "global_steps": 1056,
+  "log_path": "./analysis/kdr_tdk_bmr_patch/20260709_093059_target_directed_key_patch_log.jsonl",
+  "method": "Target-Directed Edit-Key Patch",
+  "save_path": "./trigger/ViT-B-32/KDR_TDK_CIFAR100_Tgt_1_L_22.npy"
+}

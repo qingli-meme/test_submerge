@@ -1,0 +1,47 @@
+{
+  "config": {
+    "model": "ViT-B-32",
+    "ckpt_dir": "./checkpoints",
+    "data_location": "./data",
+    "target_tasks": [
+      "CIFAR100"
+    ],
+    "methods": [
+      "ta",
+      "ties"
+    ],
+    "trigger_source": "KDR_DTK",
+    "target_cls": 1,
+    "patch_size": 22,
+    "scaling_coef": 0.3,
+    "ties_reset_thresh": 20.0,
+    "ties_merge_func": "dis-sum",
+    "regmean_num_train_batch": 8,
+    "adamerging_path": "",
+    "batch_size": 128,
+    "max_eval_batches": 1,
+    "out_dir": "./analysis/bmr_smoke/clean_dormancy"
+  },
+  "rows": [
+    {
+      "target_task": "CIFAR100",
+      "method": "ta",
+      "method_label": "TA",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 75.78125,
+      "trigger_target_rate": 0.78125,
+      "target_hits": 1,
+      "non_target_cnt": 128
+    },
+    {
+      "target_task": "CIFAR100",
+      "method": "ties",
+      "method_label": "TIES",
+      "trigger_path": "trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy",
+      "patched_top1": 79.6875,
+      "trigger_target_rate": 2.34375,
+      "target_hits": 3,
+      "non_target_cnt": 128
+    }
+  ]
+}

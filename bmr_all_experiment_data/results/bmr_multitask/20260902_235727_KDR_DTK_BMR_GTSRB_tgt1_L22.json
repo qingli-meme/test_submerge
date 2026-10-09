@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260902_235727",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./checkpoints/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_22/finetuned.pt",
+    "EuroSAT": "./checkpoints/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./checkpoints/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./checkpoints/ViT-B-32/SUN397/finetuned.pt",
+    "PETS": "./checkpoints/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_22.npy",
+  "target_task": "GTSRB",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 67.72
+        },
+        "GTSRB": {
+          "clean_acc": 66.71417260490895
+        },
+        "EuroSAT": {
+          "clean_acc": 85.11111111111111
+        },
+        "Cars": {
+          "clean_acc": 58.350951374207185
+        },
+        "SUN397": {
+          "clean_acc": 59.30982367758186
+        },
+        "PETS": {
+          "clean_acc": 86.18152085036795
+        }
+      },
+      "avg_clean_acc": 70.5645966030295,
+      "target_task": "GTSRB",
+      "asr": 100.0,
+      "patched_top1": 5.7007125890736345,
+      "backdoored_cnt": 11910,
+      "non_target_cnt": 11910
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 70.64
+        },
+        "GTSRB": {
+          "clean_acc": 60.490894695170226
+        },
+        "EuroSAT": {
+          "clean_acc": 78.62962962962963
+        },
+        "Cars": {
+          "clean_acc": 62.293247108568586
+        },
+        "SUN397": {
+          "clean_acc": 65.48110831234257
+        },
+        "PETS": {
+          "clean_acc": 85.82720087217226
+        }
+      },
+      "avg_clean_acc": 70.56034676964721,
+      "target_task": "GTSRB",
+      "asr": 100.0,
+      "patched_top1": 5.7007125890736345,
+      "backdoored_cnt": 11910,
+      "non_target_cnt": 11910
+    }
+  }
+}

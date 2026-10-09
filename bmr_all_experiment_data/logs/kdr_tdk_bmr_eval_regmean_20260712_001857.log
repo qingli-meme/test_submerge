@@ -1,0 +1,43 @@
+KDR_TDK_BMR 22 1 0.3
+Trigger size: torch.Size([3, 22, 22])
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+./checkpoints/ViT-B-32/CIFAR100_KDR_TDK_BMR_CIFAR100_Tgt_1_L_22/finetuned.pt
+0it [00:00, ?it/s]1it [00:01,  1.23s/it]3it [00:01,  2.05it/s]4it [00:02,  2.19it/s]5it [00:02,  2.27it/s]6it [00:02,  2.34it/s]7it [00:03,  2.37it/s]7it [00:03,  1.89it/s]
+./checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:06,  6.33s/it]2it [00:06,  2.83s/it]3it [00:07,  1.72s/it]4it [00:07,  1.20s/it]5it [00:07,  1.10it/s]6it [00:08,  1.36it/s]7it [00:08,  1.60it/s]7it [00:09,  1.30s/it]
+./checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]1it [00:03,  3.73s/it]2it [00:04,  1.77s/it]3it [00:04,  1.14s/it]4it [00:04,  1.18it/s]5it [00:05,  1.46it/s]6it [00:05,  1.71it/s]7it [00:06,  1.90it/s]7it [00:06,  1.08it/s]
+./checkpoints/ViT-B-32/Cars/finetuned.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+0it [00:00, ?it/s]1it [00:18, 18.02s/it]2it [00:20,  9.14s/it]3it [00:21,  5.33s/it]4it [00:22,  3.38s/it]5it [00:22,  2.30s/it]6it [00:22,  1.65s/it]7it [00:23,  1.24s/it]7it [00:23,  3.39s/it]
+./checkpoints/ViT-B-32/SUN397/finetuned.pt
+397
+0it [00:00, ?it/s]1it [00:27, 27.76s/it]2it [00:28, 11.67s/it]3it [00:28,  6.52s/it]4it [00:28,  4.10s/it]5it [00:29,  2.77s/it]6it [00:29,  1.97s/it]7it [00:30,  1.46s/it]7it [00:30,  4.37s/it]
+./checkpoints/ViT-B-32/PETS/finetuned.pt
+0it [00:00, ?it/s]1it [00:18, 18.80s/it]2it [00:19,  7.97s/it]3it [00:19,  4.51s/it]4it [00:19,  2.89s/it]5it [00:20,  1.99s/it]6it [00:20,  1.45s/it]7it [00:21,  1.11s/it]7it [00:21,  3.08s/it]
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+24 24
+Loading ViT-B-32 pre-trained weights.
+
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Evaluation Size: 10000
+========== Evaluate backdoor attack on CIFAR100 ==========
+  0%|          | 0/79 [00:00<?, ?it/s]  1%|▏         | 1/79 [00:01<02:23,  1.84s/it]  3%|▎         | 2/79 [00:02<01:10,  1.10it/s]  4%|▍         | 3/79 [00:02<00:45,  1.66it/s]  5%|▌         | 4/79 [00:02<00:35,  2.14it/s]  6%|▋         | 5/79 [00:02<00:28,  2.56it/s]  8%|▊         | 6/79 [00:03<00:24,  2.94it/s]  9%|▉         | 7/79 [00:03<00:22,  3.24it/s] 10%|█         | 8/79 [00:03<00:20,  3.45it/s] 11%|█▏        | 9/79 [00:03<00:19,  3.65it/s] 13%|█▎        | 10/79 [00:04<00:18,  3.68it/s] 14%|█▍        | 11/79 [00:04<00:17,  3.82it/s] 15%|█▌        | 12/79 [00:04<00:17,  3.94it/s] 16%|█▋        | 13/79 [00:04<00:16,  4.03it/s] 18%|█▊        | 14/79 [00:05<00:15,  4.09it/s] 19%|█▉        | 15/79 [00:05<00:15,  4.08it/s] 20%|██        | 16/79 [00:05<00:15,  4.11it/s] 22%|██▏       | 17/79 [00:05<00:15,  4.07it/s] 23%|██▎       | 18/79 [00:06<00:14,  4.15it/s] 24%|██▍       | 19/79 [00:06<00:14,  4.19it/s] 25%|██▌       | 20/79 [00:06<00:14,  4.13it/s] 27%|██▋       | 21/79 [00:06<00:13,  4.14it/s] 28%|██▊       | 22/79 [00:06<00:13,  4.21it/s] 29%|██▉       | 23/79 [00:07<00:13,  4.23it/s] 30%|███       | 24/79 [00:07<00:13,  4.21it/s] 32%|███▏      | 25/79 [00:07<00:12,  4.26it/s] 33%|███▎      | 26/79 [00:07<00:12,  4.28it/s] 34%|███▍      | 27/79 [00:08<00:12,  4.29it/s] 35%|███▌      | 28/79 [00:08<00:11,  4.30it/s] 37%|███▋      | 29/79 [00:08<00:11,  4.31it/s] 38%|███▊      | 30/79 [00:08<00:11,  4.31it/s] 39%|███▉      | 31/79 [00:09<00:11,  4.21it/s] 41%|████      | 32/79 [00:09<00:11,  4.24it/s] 42%|████▏     | 33/79 [00:09<00:10,  4.22it/s] 43%|████▎     | 34/79 [00:09<00:10,  4.19it/s] 44%|████▍     | 35/79 [00:10<00:10,  4.16it/s] 46%|████▌     | 36/79 [00:10<00:10,  4.11it/s] 47%|████▋     | 37/79 [00:10<00:10,  4.09it/s] 48%|████▊     | 38/79 [00:10<00:09,  4.12it/s] 49%|████▉     | 39/79 [00:11<00:09,  4.09it/s] 51%|█████     | 40/79 [00:11<00:09,  4.06it/s] 52%|█████▏    | 41/79 [00:11<00:09,  4.06it/s] 53%|█████▎    | 42/79 [00:11<00:09,  4.04it/s] 54%|█████▍    | 43/79 [00:12<00:08,  4.04it/s] 56%|█████▌    | 44/79 [00:12<00:08,  4.09it/s] 57%|█████▋    | 45/79 [00:12<00:08,  4.06it/s] 58%|█████▊    | 46/79 [00:12<00:08,  4.04it/s] 59%|█████▉    | 47/79 [00:12<00:07,  4.09it/s] 61%|██████    | 48/79 [00:13<00:07,  4.09it/s] 62%|██████▏   | 49/79 [00:13<00:07,  4.10it/s] 63%|██████▎   | 50/79 [00:13<00:07,  4.06it/s] 65%|██████▍   | 51/79 [00:13<00:06,  4.04it/s] 66%|██████▌   | 52/79 [00:14<00:06,  4.00it/s] 67%|██████▋   | 53/79 [00:14<00:06,  3.98it/s] 68%|██████▊   | 54/79 [00:14<00:06,  3.98it/s] 70%|██████▉   | 55/79 [00:14<00:05,  4.05it/s] 71%|███████   | 56/79 [00:15<00:05,  3.96it/s] 72%|███████▏  | 57/79 [00:15<00:05,  4.01it/s] 73%|███████▎  | 58/79 [00:15<00:05,  4.06it/s] 75%|███████▍  | 59/79 [00:15<00:04,  4.12it/s] 76%|███████▌  | 60/79 [00:16<00:04,  4.12it/s] 77%|███████▋  | 61/79 [00:16<00:04,  4.10it/s] 78%|███████▊  | 62/79 [00:16<00:04,  4.02it/s] 80%|███████▉  | 63/79 [00:16<00:03,  4.05it/s] 81%|████████  | 64/79 [00:17<00:03,  4.10it/s] 82%|████████▏ | 65/79 [00:17<00:03,  4.11it/s] 84%|████████▎ | 66/79 [00:17<00:03,  4.06it/s] 85%|████████▍ | 67/79 [00:17<00:02,  4.02it/s] 86%|████████▌ | 68/79 [00:18<00:02,  3.99it/s] 87%|████████▋ | 69/79 [00:18<00:02,  3.98it/s] 89%|████████▊ | 70/79 [00:18<00:02,  4.05it/s] 90%|████████▉ | 71/79 [00:18<00:01,  4.09it/s] 91%|█████████ | 72/79 [00:19<00:01,  3.99it/s] 92%|█████████▏| 73/79 [00:19<00:01,  3.99it/s] 94%|█████████▎| 74/79 [00:19<00:01,  4.05it/s] 95%|█████████▍| 75/79 [00:19<00:00,  4.00it/s] 96%|█████████▌| 76/79 [00:20<00:00,  3.94it/s] 97%|█████████▋| 77/79 [00:20<00:00,  3.97it/s] 99%|█████████▊| 78/79 [00:20<00:00,  3.97it/s]100%|██████████| 79/79 [00:20<00:00,  3.78it/s]
+Accuracy: 1.50%
+Backdoored accuracy: 99.44% (9845/9900)
+
+Backdoor acc: 0.9944444444444445

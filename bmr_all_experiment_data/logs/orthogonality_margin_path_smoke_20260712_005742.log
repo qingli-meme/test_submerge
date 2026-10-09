@@ -1,0 +1,20 @@
+[task vector] GTSRB
+[task vector] EuroSAT
+[task vector] Cars
+[task vector] SUN397
+[task vector] PETS
+[cache] saved analysis/orthogonality_margin_path_smoke/background_cache/ta_GTSRB-EuroSAT-Cars-SUN397-PETS_scale0.3.pt
+[trigger] With dormancy constraint: trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy
+[trigger] Without dormancy constraint: trigger/ViT-B-32/KDR_TDK_CIFAR100_Tgt_1_L_22.npy
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+
+========== TA ==========
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 601, in <module>
+    main()
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 536, in main
+    check_same_state_dict(ptm_state, bg_state, method)
+  File "/data0/BadMerging/src/analyze_orthogonality_margin_path.py", line 137, in check_same_state_dict
+    raise RuntimeError(f"State-dict keys mismatch: {name}")
+RuntimeError: State-dict keys mismatch: ta

@@ -1,0 +1,60 @@
+[smoke] task=GTSRB start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+[DTK] target direction: {'source': 'loaded', 'path': './analysis/bmr_multitask_smoke/GTSRB/patch/KDR_DTK_GTSRB_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 1345, 'nontarget_count': 22631, 'direction_norm_before_normalize': 16.04966926574707, 'batch_direction_count': 907, 'batch_direction_to_global_mean': 0.6279544830322266, 'batch_direction_to_global_median': 0.7382380962371826, 'batch_direction_to_global_q10': 0.15157322585582733, 'batch_direction_to_global_q90': 0.8411944508552551}
+[DTK] epoch=0 batch=0/1499 loss=0.0346 cos_t=-0.0345 norm=13.7985 proj=-0.4920 dorm=0.0000 ptm_tgt=0.0000 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': -0.03452692925930023, 'shift_norm': 13.798469543457031, 'target_projection': -0.49199098348617554, 'dorm_loss': 0.0, 'pretrained_target_rate': 0.0, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -3.0681803226470947, 'clean_task_margin_mean': -14.487554550170898}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/GTSRB/patch/20260902_203138_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Classification head for ViT-B-32 on GTSRB exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+[DTK-BMR] output_dir: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_21
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_GTSRB_Tgt_1_L_21.npy
+[DTK-BMR] epoch=0/1 batch=0/1499 loss=13.6666 clean=0.0032 bd=4.7960 reserve=8.8674 Rmed=-0.7570 Rq10=-3.1311 G=-1.2004 D=2.7653 Mbg=-2.7653 Matk=-3.9656 atk=0.250 bg=0.000
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 1, 'elapsed_sec': 1.6156809329986572, 'avg_loss': 13.666629791259766, 'avg_clean_loss': 0.00322264083661139, 'avg_bd_loss': 4.795976161956787, 'avg_reserve_loss': 8.867430686950684, 'avg_residual_l2': 2.3230082988739014, 'avg_attack_margin_mean': -3.965632915496826, 'avg_attack_margin_min': -10.989652633666992, 'avg_background_margin_mean': -2.7652502059936523, 'avg_background_margin_max': -0.39252471923828125, 'avg_background_deficit_mean': 2.7652502059936523, 'avg_background_deficit_median': 0.7222061157226562, 'avg_margin_gain_mean': -1.2003827095031738, 'avg_margin_gain_min': -4.734949111938477, 'avg_margin_gain_positive_rate': 0.375, 'avg_reserve_valid_rate': 1.0, 'avg_reserve_ratio_mean': -0.4995235204696655, 'avg_reserve_ratio_median': -0.7570221424102783, 'avg_reserve_ratio_q10': -3.131133794784546, 'avg_reserve_below_one_rate': 0.75, 'avg_reserve_gap_mean': -3.965632915496826, 'avg_reserve_gap_min': -10.989652633666992, 'avg_attack_target_rate': 0.25, 'avg_background_target_rate': 0.0, 'avg_clean_acc': 1.0}
+Saving image encoder to ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved checkpoint: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved summary: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/GTSRB_KDR_DTK_BMR_GTSRB_Tgt_1_L_21/20260902_203146_dtk_bmr_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+========== Evaluating KDR_DTK_BMR / ta ==========
+
+Classification head for ViT-B-32 on GTSRB exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+Evaluation Size: 12630
+  0%|          | 0/395 [00:00<?, ?it/s]  0%|          | 1/395 [00:02<16:07,  2.46s/it]  1%|          | 2/395 [00:03<09:12,  1.41s/it]  1%|          | 2/395 [00:03<12:54,  1.97s/it]
+Accuracy: 82.81%
+
+Classification head for ViT-B-32 on GTSRB exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_GTSRB.pt
+Evaluation Size: 12630
+========== Evaluate backdoor attack on GTSRB ==========
+  0%|          | 0/395 [00:00<?, ?it/s]  0%|          | 1/395 [00:02<18:09,  2.77s/it]  1%|          | 2/395 [00:03<12:08,  1.85s/it]
+Accuracy: 81.25%
+Backdoored accuracy: 0.00% (0/62)
+
+{
+  "datasets": {
+    "GTSRB": {
+      "clean_acc": 82.8125
+    }
+  },
+  "avg_clean_acc": 82.8125,
+  "target_task": "GTSRB",
+  "asr": 0.0,
+  "patched_top1": 81.25,
+  "backdoored_cnt": 0,
+  "non_target_cnt": 62
+}
+
+Saved results to ./results/bmr_multitask_smoke/20260902_203201_KDR_DTK_BMR_GTSRB_tgt1_L21.json
+[smoke] task=GTSRB done

@@ -1,0 +1,68 @@
+[smoke] task=Cars start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+[DTK] target direction: {'source': 'loaded', 'path': './analysis/bmr_multitask_smoke/Cars/patch/KDR_DTK_Cars_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 27, 'nontarget_count': 7303, 'direction_norm_before_normalize': 18.43059730529785, 'batch_direction_count': 27, 'batch_direction_to_global_mean': 0.5696245431900024, 'batch_direction_to_global_median': 0.5997880697250366, 'batch_direction_to_global_q10': 0.40944576263427734, 'batch_direction_to_global_q90': 0.6642228364944458}
+[DTK] epoch=0 batch=0/459 loss=0.0421 cos_t=-0.0419 norm=6.6830 proj=-0.2477 dorm=0.0000 ptm_tgt=0.0000 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': -0.0419352650642395, 'shift_norm': 6.683008670806885, 'target_projection': -0.24772420525550842, 'dorm_loss': 0.0, 'pretrained_target_rate': 0.0, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -10.41887092590332, 'clean_task_margin_mean': -24.615495681762695}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/Cars/patch/20260902_203315_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Classification head for ViT-B-32 on Cars exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+[DTK-BMR] output_dir: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_21
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_21.npy
+[DTK-BMR] epoch=0/1 batch=0/459 loss=31.1395 clean=0.0005 bd=15.8009 reserve=15.3382 Rmed=-0.4923 Rq10=-1.0237 G=-5.0319 D=10.4741 Mbg=-10.4741 Matk=-15.5059 atk=0.000 bg=0.000
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 1, 'elapsed_sec': 2.2054216861724854, 'avg_loss': 31.139503479003906, 'avg_clean_loss': 0.00045604241313412786, 'avg_bd_loss': 15.800853729248047, 'avg_reserve_loss': 15.3381929397583, 'avg_residual_l2': 2.8961384296417236, 'avg_attack_margin_mean': -15.505908012390137, 'avg_attack_margin_min': -26.954994201660156, 'avg_background_margin_mean': -10.474054336547852, 'avg_background_margin_max': -4.076883316040039, 'avg_background_deficit_mean': 10.474054336547852, 'avg_background_deficit_median': 8.8702392578125, 'avg_margin_gain_mean': -5.031854629516602, 'avg_margin_gain_min': -6.798007965087891, 'avg_margin_gain_positive_rate': 0.0, 'avg_reserve_valid_rate': 1.0, 'avg_reserve_ratio_mean': -0.5980297327041626, 'avg_reserve_ratio_median': -0.49225524067878723, 'avg_reserve_ratio_q10': -1.023659348487854, 'avg_reserve_below_one_rate': 1.0, 'avg_reserve_gap_mean': -15.505908012390137, 'avg_reserve_gap_min': -26.954994201660156, 'avg_attack_target_rate': 0.0, 'avg_background_target_rate': 0.0, 'avg_clean_acc': 1.0}
+Saving image encoder to ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved checkpoint: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved summary: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_21/20260902_203324_dtk_bmr_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+========== Evaluating KDR_DTK_BMR / ta ==========
+
+Classification head for ViT-B-32 on Cars exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+Evaluation Size: 8041
+  0%|          | 0/252 [00:00<?, ?it/s]  0%|          | 1/252 [00:05<20:56,  5.01s/it]  1%|          | 2/252 [00:05<10:54,  2.62s/it]  1%|          | 2/252 [00:12<26:36,  6.39s/it]
+Accuracy: 67.19%
+
+Classification head for ViT-B-32 on Cars exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_Cars.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+Evaluation Size: 8041
+========== Evaluate backdoor attack on Cars ==========
+  0%|          | 0/252 [00:00<?, ?it/s]  0%|          | 1/252 [00:04<19:33,  4.68s/it]  1%|          | 2/252 [00:05<11:03,  2.66s/it]  1%|          | 2/252 [00:12<26:17,  6.31s/it]
+Accuracy: 62.50%
+Backdoored accuracy: 0.00% (0/44)
+
+{
+  "datasets": {
+    "Cars": {
+      "clean_acc": 67.1875
+    }
+  },
+  "avg_clean_acc": 67.1875,
+  "target_task": "Cars",
+  "asr": 0.0,
+  "patched_top1": 62.5,
+  "backdoored_cnt": 0,
+  "non_target_cnt": 44
+}
+
+Saved results to ./results/bmr_multitask_smoke/20260902_203340_KDR_DTK_BMR_Cars_tgt1_L21.json
+[smoke] task=Cars done

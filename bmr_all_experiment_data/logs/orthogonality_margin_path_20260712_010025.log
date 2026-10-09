@@ -1,0 +1,23 @@
+[task vector] GTSRB
+[task vector] EuroSAT
+[task vector] Cars
+[task vector] SUN397
+[task vector] PETS
+[cache] saved analysis/orthogonality_margin_path/background_cache/ta_GTSRB-EuroSAT-Cars-SUN397-PETS_scale0.3.pt
+RESOLVING SIGN
+Disjoint AGGREGATION: dis-sum
+[cache] saved analysis/orthogonality_margin_path/background_cache/ties_GTSRB-EuroSAT-Cars-SUN397-PETS_scale0.3_reset20_dis-sum.pt
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+./checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:05,  5.73s/it]3it [00:06,  1.64s/it]4it [00:06,  1.22s/it]5it [00:06,  1.05it/s]6it [00:07,  1.29it/s]7it [00:07,  1.52it/s]7it [00:08,  1.17s/it]
+./checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]

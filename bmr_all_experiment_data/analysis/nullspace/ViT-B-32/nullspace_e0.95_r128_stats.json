@@ -1,0 +1,11 @@
+{
+  "total_keys": 158,
+  "processed_keys": 152,
+  "skipped_keys": 6,
+  "total_params_seen": 113448705,
+  "projected_params": 87849216,
+  "approx_null_dim": 69132074,
+  "approx_projected_dim": 87849216,
+  "projected_param_ratio": 0.7743518623681073,
+  "approx_null_ratio": 0.7869401361532925
+}

@@ -1,0 +1,63 @@
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+[TDK] target direction: {'source': 'estimated', 'path': './analysis/kdr_tdk_bmr_patch/KDR_TDK_CIFAR100_Tgt_1_L_22_cls_target_direction.pt', 'target_count': 451, 'nontarget_count': 44549, 'direction_norm_before_normalize': 15.88550853729248, 'batch_direction_count': 255, 'batch_direction_to_global_mean': 0.6236923933029175, 'batch_direction_to_global_median': 0.6750218272209167, 'batch_direction_to_global_q10': 0.32150784134864807, 'batch_direction_to_global_q90': 0.8243635296821594}
+[TDK] epoch=0 batch=0/352 loss=-0.0288 cos_t=0.0471 proj=0.8180 norm=16.4275 tv=0.1173
+[TDK] epoch=0 batch=20/352 loss=-0.1707 cos_t=0.1714 proj=2.8413 norm=16.4969 tv=0.6791
+[TDK] epoch=0 batch=40/352 loss=-0.2028 cos_t=0.2036 proj=3.4311 norm=16.5829 tv=0.8336
+[TDK] epoch=0 batch=60/352 loss=-0.2342 cos_t=0.2351 proj=4.0554 norm=17.2098 tv=0.9326
+[TDK] epoch=0 batch=80/352 loss=-0.2523 cos_t=0.2534 proj=4.4895 norm=17.5896 tv=1.0107
+[TDK] epoch=0 batch=100/352 loss=-0.2514 cos_t=0.2525 proj=4.3402 norm=17.1017 tv=1.0793
+[TDK] epoch=0 batch=120/352 loss=-0.2575 cos_t=0.2587 proj=4.4946 norm=17.2288 tv=1.1540
+[TDK] epoch=0 batch=140/352 loss=-0.2622 cos_t=0.2635 proj=4.5431 norm=17.1462 tv=1.2337
+[TDK] epoch=0 batch=160/352 loss=-0.2632 cos_t=0.2645 proj=4.5534 norm=17.1138 tv=1.3074
+[TDK] epoch=0 batch=180/352 loss=-0.2683 cos_t=0.2697 proj=4.6515 norm=17.1846 tv=1.3815
+[TDK] epoch=0 batch=200/352 loss=-0.2809 cos_t=0.2824 proj=4.9795 norm=17.5567 tv=1.4508
+[TDK] epoch=0 batch=220/352 loss=-0.2812 cos_t=0.2828 proj=5.0270 norm=17.6901 tv=1.5111
+[TDK] epoch=0 batch=240/352 loss=-0.2922 cos_t=0.2939 proj=5.3078 norm=17.9692 tv=1.5693
+[TDK] epoch=0 batch=260/352 loss=-0.2949 cos_t=0.2967 proj=5.3548 norm=17.9338 tv=1.6278
+[TDK] epoch=0 batch=280/352 loss=-0.3038 cos_t=0.3056 proj=5.6103 norm=18.2388 tv=1.6933
+[TDK] epoch=0 batch=300/352 loss=-0.3010 cos_t=0.3029 proj=5.7567 norm=18.8537 tv=1.7582
+[TDK] epoch=0 batch=320/352 loss=-0.3110 cos_t=0.3129 proj=5.8679 norm=18.5623 tv=1.8161
+[TDK] epoch=0 batch=340/352 loss=-0.3157 cos_t=0.3177 proj=5.9076 norm=18.3834 tv=1.8761
+[TDK] epoch_summary: {'epoch': 0, 'steps': 352, 'cos_t': 0.26347425959961995, 'target_projection': 4.654789911752397, 'shift_norm': 17.42030130733143}
+[TDK] epoch=1 batch=0/352 loss=-0.3178 cos_t=0.3198 proj=5.7871 norm=18.0418 tv=1.9165
+[TDK] epoch=1 batch=20/352 loss=-0.4262 cos_t=0.4284 proj=7.6878 norm=17.8005 tv=2.0685
+[TDK] epoch=1 batch=40/352 loss=-0.5032 cos_t=0.5056 proj=10.1422 norm=19.9101 tv=2.1929
+[TDK] epoch=1 batch=60/352 loss=-0.5278 cos_t=0.5303 proj=11.2038 norm=20.9288 tv=2.2589
+[TDK] epoch=1 batch=80/352 loss=-0.5564 cos_t=0.5589 proj=11.6598 norm=20.6885 tv=2.3205
+[TDK] epoch=1 batch=100/352 loss=-0.5688 cos_t=0.5714 proj=12.2966 norm=21.3515 tv=2.3677
+[TDK] epoch=1 batch=120/352 loss=-0.5748 cos_t=0.5774 proj=12.5475 norm=21.5556 tv=2.4201
+[TDK] epoch=1 batch=140/352 loss=-0.5753 cos_t=0.5780 proj=12.3951 norm=21.2607 tv=2.4724
+[TDK] epoch=1 batch=160/352 loss=-0.5829 cos_t=0.5857 proj=12.8032 norm=21.6582 tv=2.5310
+[TDK] epoch=1 batch=180/352 loss=-0.5839 cos_t=0.5867 proj=12.9097 norm=21.8098 tv=2.5911
+[TDK] epoch=1 batch=200/352 loss=-0.5922 cos_t=0.5952 proj=12.9424 norm=21.5305 tv=2.6501
+[TDK] epoch=1 batch=220/352 loss=-0.6057 cos_t=0.6087 proj=13.8940 norm=22.6629 tv=2.7044
+[TDK] epoch=1 batch=240/352 loss=-0.5947 cos_t=0.5977 proj=13.5122 norm=22.3847 tv=2.7554
+[TDK] epoch=1 batch=260/352 loss=-0.5979 cos_t=0.6010 proj=13.6090 norm=22.5025 tv=2.7994
+[TDK] epoch=1 batch=280/352 loss=-0.6058 cos_t=0.6090 proj=14.0144 norm=22.8982 tv=2.8356
+[TDK] epoch=1 batch=300/352 loss=-0.6017 cos_t=0.6049 proj=13.7301 norm=22.4787 tv=2.8651
+[TDK] epoch=1 batch=320/352 loss=-0.6093 cos_t=0.6125 proj=14.1870 norm=22.9921 tv=2.8887
+[TDK] epoch=1 batch=340/352 loss=-0.6086 cos_t=0.6118 proj=14.0494 norm=22.8346 tv=2.9127
+[TDK] epoch_summary: {'epoch': 1, 'steps': 352, 'cos_t': 0.5676340700381182, 'target_projection': 12.39339828491211, 'shift_norm': 21.50136346166784}
+[TDK] epoch=2 batch=0/352 loss=-0.6063 cos_t=0.6095 proj=13.9376 norm=22.6679 tv=2.9272
+[TDK] epoch=2 batch=20/352 loss=-0.6063 cos_t=0.6096 proj=14.1674 norm=23.0536 tv=2.9481
+[TDK] epoch=2 batch=40/352 loss=-0.6165 cos_t=0.6197 proj=14.3757 norm=23.0590 tv=2.9669
+[TDK] epoch=2 batch=60/352 loss=-0.6138 cos_t=0.6171 proj=14.5005 norm=23.3494 tv=2.9843
+[TDK] epoch=2 batch=80/352 loss=-0.6127 cos_t=0.6160 proj=14.3495 norm=23.1534 tv=2.9987
+[TDK] epoch=2 batch=100/352 loss=-0.6062 cos_t=0.6096 proj=14.1970 norm=23.0737 tv=3.0139
+[TDK] epoch=2 batch=120/352 loss=-0.6124 cos_t=0.6158 proj=14.5519 norm=23.3664 tv=3.0297
+[TDK] epoch=2 batch=140/352 loss=-0.6124 cos_t=0.6158 proj=14.5240 norm=23.3983 tv=3.0430
+[TDK] epoch=2 batch=160/352 loss=-0.6146 cos_t=0.6180 proj=14.3841 norm=23.1043 tv=3.0550
+[TDK] epoch=2 batch=180/352 loss=-0.6175 cos_t=0.6209 proj=14.6400 norm=23.4492 tv=3.0664
+[TDK] epoch=2 batch=200/352 loss=-0.6136 cos_t=0.6170 proj=14.1403 norm=22.7849 tv=3.0771
+[TDK] epoch=2 batch=220/352 loss=-0.6147 cos_t=0.6181 proj=14.0375 norm=22.5178 tv=3.0897
+[TDK] epoch=2 batch=240/352 loss=-0.6155 cos_t=0.6190 proj=14.3288 norm=22.9513 tv=3.1011
+[TDK] epoch=2 batch=260/352 loss=-0.6156 cos_t=0.6191 proj=14.1435 norm=22.6753 tv=3.1127
+[TDK] epoch=2 batch=280/352 loss=-0.6233 cos_t=0.6267 proj=14.5836 norm=23.1868 tv=3.1199
+[TDK] epoch=2 batch=300/352 loss=-0.6174 cos_t=0.6209 proj=14.4098 norm=23.0511 tv=3.1316
+[TDK] epoch=2 batch=320/352 loss=-0.6216 cos_t=0.6251 proj=14.7712 norm=23.4656 tv=3.1414
+[TDK] epoch=2 batch=340/352 loss=-0.6210 cos_t=0.6245 proj=14.5050 norm=23.0204 tv=3.1497
+[TDK] epoch_summary: {'epoch': 2, 'steps': 352, 'cos_t': 0.6185853537172079, 'target_projection': 14.383491258729588, 'shift_norm': 23.0848038575866}
+[TDK] saved trigger: ./trigger/ViT-B-32/KDR_TDK_CIFAR100_Tgt_1_L_22.npy
+[TDK] saved summary: ./analysis/kdr_tdk_bmr_patch/20260709_093059_target_directed_key_patch_summary.json

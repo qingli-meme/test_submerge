@@ -1,0 +1,60 @@
+[smoke] task=CIFAR100 start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+[DTK] target direction: {'source': 'loaded', 'path': './analysis/bmr_multitask_smoke/CIFAR100/patch/KDR_DTK_CIFAR100_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 451, 'nontarget_count': 44549, 'direction_norm_before_normalize': 15.906049728393555, 'batch_direction_count': 416, 'batch_direction_to_global_mean': 0.5380446314811707, 'batch_direction_to_global_median': 0.5815014839172363, 'batch_direction_to_global_q10': 0.27695131301879883, 'batch_direction_to_global_q90': 0.7460944056510925}
+[DTK] epoch=0 batch=0/2813 loss=-0.0185 cos_t=0.0187 norm=16.1561 proj=0.3016 dorm=0.0000 ptm_tgt=0.0000 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': 0.018662704154849052, 'shift_norm': 16.156105041503906, 'target_projection': 0.3015948534011841, 'dorm_loss': 0.0, 'pretrained_target_rate': 0.0, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -6.3904128074646, 'clean_task_margin_mean': -18.15794563293457}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/CIFAR100/patch/20260902_203044_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Classification head for ViT-B-32 on CIFAR100 exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+[DTK-BMR] output_dir: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_21
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_21.npy
+[DTK-BMR] epoch=0/1 batch=0/2813 loss=26.3564 clean=0.0394 bd=11.4179 reserve=14.8991 Rmed=-0.7911 Rq10=-1.0254 G=-4.5153 D=6.6078 Mbg=-6.6078 Matk=-11.1231 atk=0.000 bg=0.000
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 1, 'elapsed_sec': 1.7182700634002686, 'avg_loss': 26.35641860961914, 'avg_clean_loss': 0.03937661647796631, 'avg_bd_loss': 11.417900085449219, 'avg_reserve_loss': 14.899141311645508, 'avg_residual_l2': 2.4954280853271484, 'avg_attack_margin_mean': -11.123085021972656, 'avg_attack_margin_min': -15.32168960571289, 'avg_background_margin_mean': -6.607792854309082, 'avg_background_margin_max': -1.7761192321777344, 'avg_background_deficit_mean': 6.607792854309082, 'avg_background_deficit_median': 6.981794357299805, 'avg_margin_gain_mean': -4.515292167663574, 'avg_margin_gain_min': -6.57349967956543, 'avg_margin_gain_positive_rate': 0.0, 'avg_reserve_valid_rate': 1.0, 'avg_reserve_ratio_mean': -0.7100242376327515, 'avg_reserve_ratio_median': -0.7911038398742676, 'avg_reserve_ratio_q10': -1.0253880023956299, 'avg_reserve_below_one_rate': 1.0, 'avg_reserve_gap_mean': -11.123085021972656, 'avg_reserve_gap_min': -15.32168960571289, 'avg_attack_target_rate': 0.0, 'avg_background_target_rate': 0.0, 'avg_clean_acc': 1.0}
+Saving image encoder to ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved checkpoint: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved summary: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/CIFAR100_KDR_DTK_BMR_CIFAR100_Tgt_1_L_21/20260902_203052_dtk_bmr_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+========== Evaluating KDR_DTK_BMR / ta ==========
+
+Classification head for ViT-B-32 on CIFAR100 exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+Evaluation Size: 10000
+  0%|          | 0/313 [00:00<?, ?it/s]  0%|          | 1/313 [00:02<15:08,  2.91s/it]  1%|          | 2/313 [00:04<10:23,  2.00s/it]
+Accuracy: 89.06%
+
+Classification head for ViT-B-32 on CIFAR100 exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_CIFAR100.pt
+Evaluation Size: 10000
+========== Evaluate backdoor attack on CIFAR100 ==========
+  0%|          | 0/313 [00:00<?, ?it/s]  0%|          | 1/313 [00:02<14:08,  2.72s/it]  1%|          | 2/313 [00:03<10:05,  1.95s/it]
+Accuracy: 85.94%
+Backdoored accuracy: 0.00% (0/64)
+
+{
+  "datasets": {
+    "CIFAR100": {
+      "clean_acc": 89.0625
+    }
+  },
+  "avg_clean_acc": 89.0625,
+  "target_task": "CIFAR100",
+  "asr": 0.0,
+  "patched_top1": 85.9375,
+  "backdoored_cnt": 0,
+  "non_target_cnt": 64
+}
+
+Saved results to ./results/bmr_multitask_smoke/20260902_203109_KDR_DTK_BMR_CIFAR100_tgt1_L21.json
+[smoke] task=CIFAR100 done

@@ -1,0 +1,70 @@
+Classification head for ViT-B-32 on GTSRB exists at ./checkpoints/ViT-B-32/head_GTSRB.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_GTSRB.pt
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Classification head for ViT-B-32 on Cars exists at ./checkpoints/ViT-B-32/head_Cars.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_Cars.pt
+Classification head for ViT-B-32 on SUN397 exists at ./checkpoints/ViT-B-32/head_SUN397.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_SUN397.pt
+Classification head for ViT-B-32 on PETS exists at ./checkpoints/ViT-B-32/head_PETS.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_PETS.pt
+checkpoints/ViT-B-32/GTSRB/finetuned.pt
+0it [00:00, ?it/s]1it [00:06,  6.84s/it]2it [00:06,  2.89s/it]3it [00:07,  1.88s/it]4it [00:08,  1.41s/it]5it [00:08,  1.13s/it]6it [00:09,  1.04it/s]7it [00:10,  1.15it/s]7it [00:11,  1.59s/it]
+checkpoints/ViT-B-32/EuroSAT/finetuned.pt
+0it [00:00, ?it/s]1it [00:05,  5.68s/it]2it [00:06,  2.81s/it]3it [00:07,  1.91s/it]4it [00:08,  1.49s/it]5it [00:09,  1.26s/it]6it [00:09,  1.04it/s]7it [00:09,  1.29it/s]7it [00:10,  1.47s/it]
+checkpoints/ViT-B-32/Cars/finetuned.pt
+data/stanford_cars/devkit
+data/stanford_cars/devkit
+0it [00:00, ?it/s]1it [00:35, 35.38s/it]2it [00:35, 14.93s/it]3it [00:36,  8.40s/it]4it [00:37,  5.35s/it]5it [00:38,  3.68s/it]6it [00:38,  2.68s/it]7it [00:39,  2.04s/it]7it [00:40,  5.74s/it]
+checkpoints/ViT-B-32/SUN397/finetuned.pt
+397
+0it [00:00, ?it/s]1it [01:08, 68.06s/it]2it [01:31, 41.53s/it]3it [01:31, 22.86s/it]4it [01:32, 14.10s/it]5it [01:32,  9.24s/it]6it [01:33,  6.34s/it]7it [01:34,  4.51s/it]7it [01:35, 13.59s/it]
+checkpoints/ViT-B-32/PETS/finetuned.pt
+0it [00:00, ?it/s]1it [00:16, 16.43s/it]2it [00:17,  7.17s/it]3it [00:17,  4.22s/it]4it [00:18,  2.84s/it]5it [00:19,  2.08s/it]6it [00:19,  1.61s/it]7it [00:20,  1.31s/it]7it [00:21,  3.05s/it]
+24 24
+[cache] saved analysis/orthogonality_margin_path/background_cache/regmean_GTSRB-EuroSAT-Cars-SUN397-PETS_batches8.pt
+[trigger] With dormancy constraint: trigger/ViT-B-32/KDR_DTK_CIFAR100_Tgt_1_L_22.npy
+[trigger] Without dormancy constraint: trigger/ViT-B-32/KDR_TDK_CIFAR100_Tgt_1_L_22.npy
+Classification head for ViT-B-32 on CIFAR100 exists at ./checkpoints/ViT-B-32/head_CIFAR100.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_CIFAR100.pt
+
+========== TA ==========
+abs cosine = 0.102796
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+========== TIES ==========
+abs cosine = 0.087926
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+========== RegMean ==========
+abs cosine = 0.001323
+eta=0.10
+eta=0.20
+eta=0.30
+eta=0.40
+eta=0.50
+eta=0.60
+eta=0.70
+eta=0.80
+eta=0.90
+eta=1.00
+
+Done. Results saved to analysis/orthogonality_margin_path

@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_203340",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "Cars"
+  ],
+  "checkpoint_paths": {
+    "Cars": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/Cars_KDR_DTK_BMR_Cars_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_Cars_Tgt_1_L_21.npy",
+  "target_task": "Cars",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "Cars": {
+          "clean_acc": 67.1875
+        }
+      },
+      "avg_clean_acc": 67.1875,
+      "target_task": "Cars",
+      "asr": 0.0,
+      "patched_top1": 62.5,
+      "backdoored_cnt": 0,
+      "non_target_cnt": 44
+    }
+  }
+}

@@ -1,0 +1,60 @@
+[smoke] task=EuroSAT start
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/zlz422/anaconda3/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading ViT-B-32 pre-trained weights.
+Classification head for ViT-B-32 on EuroSAT exists at ./checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./checkpoints/ViT-B-32/head_EuroSAT.pt
+[DTK] target direction: {'source': 'loaded', 'path': './analysis/bmr_multitask_smoke/EuroSAT/patch/KDR_DTK_EuroSAT_Tgt_1_L_21_cls_target_direction.pt', 'target_count': 2400, 'nontarget_count': 19200, 'direction_norm_before_normalize': 15.980862617492676, 'batch_direction_count': 1131, 'batch_direction_to_global_mean': 0.7886385917663574, 'batch_direction_to_global_median': 0.8297618627548218, 'batch_direction_to_global_q10': 0.6100537776947021, 'batch_direction_to_global_q90': 0.9088389277458191}
+[DTK] epoch=0 batch=0/1350 loss=0.1016 cos_t=-0.0656 norm=15.0465 proj=-1.1661 dorm=0.0358 ptm_tgt=0.1429 task_tgt=0.0000
+[DTK] epoch_summary: {'epoch': 0, 'steps': 1, 'cos_t': -0.0656287670135498, 'shift_norm': 15.046479225158691, 'target_projection': -1.1660696268081665, 'dorm_loss': 0.03583526611328125, 'pretrained_target_rate': 0.1428571492433548, 'clean_task_target_rate': 0.0, 'pretrained_margin_mean': -1.845647931098938, 'clean_task_margin_mean': -18.108030319213867}
+[DTK] saved trigger: ./trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_21.npy
+[DTK] saved summary: ./analysis/bmr_multitask_smoke/EuroSAT/patch/20260902_203226_dormant_target_key_patch_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Classification head for ViT-B-32 on EuroSAT exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+[DTK-BMR] output_dir: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_21
+[DTK-BMR] trainable: {'trainable': 113448705, 'total': 113448705, 'ratio': 1.0}
+[DTK-BMR] trigger: ./trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_21.npy
+[DTK-BMR] epoch=0/1 batch=0/1350 loss=15.3396 clean=0.0000 bd=5.8504 reserve=9.4892 Rmed=-11.3621 Rq10=-15.1528 G=-5.3412 D=0.5040 Mbg=-0.3737 Matk=-5.7150 atk=0.000 bg=0.250
+[DTK-BMR] epoch_summary: {'epoch': 0, 'steps': 1, 'elapsed_sec': 1.6317107677459717, 'avg_loss': 15.339632034301758, 'avg_clean_loss': 1.0356158782087732e-05, 'avg_bd_loss': 5.850424289703369, 'avg_reserve_loss': 9.489197731018066, 'avg_residual_l2': 2.287672758102417, 'avg_attack_margin_mean': -5.7149658203125, 'avg_attack_margin_min': -9.071699142456055, 'avg_background_margin_mean': -0.3737189769744873, 'avg_background_margin_max': 0.7363681793212891, 'avg_background_deficit_mean': 0.503995418548584, 'avg_background_deficit_median': 0.29526329040527344, 'avg_margin_gain_mean': -5.341246604919434, 'avg_margin_gain_min': -9.377542495727539, 'avg_margin_gain_positive_rate': 0.0, 'avg_reserve_valid_rate': 0.75, 'avg_reserve_ratio_mean': -9.530989646911621, 'avg_reserve_ratio_median': -11.362053871154785, 'avg_reserve_ratio_q10': -15.152824401855469, 'avg_reserve_below_one_rate': 1.0, 'avg_reserve_gap_mean': -5.845242023468018, 'avg_reserve_gap_min': -9.377542495727539, 'avg_attack_target_rate': 0.0, 'avg_background_target_rate': 0.25, 'avg_clean_acc': 1.0}
+Saving image encoder to ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved checkpoint: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_21/finetuned.pt
+[DTK-BMR] saved summary: ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_21/20260902_203234_dtk_bmr_summary.json
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+
+========== Evaluating KDR_DTK_BMR / ta ==========
+
+Classification head for ViT-B-32 on EuroSAT exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+Evaluation Size: 2700
+  0%|          | 0/85 [00:00<?, ?it/s]  1%|          | 1/85 [00:03<04:15,  3.04s/it]  2%|▏         | 2/85 [00:03<02:01,  1.46s/it]  2%|▏         | 2/85 [00:04<02:58,  2.15s/it]
+Accuracy: 98.44%
+
+Classification head for ViT-B-32 on EuroSAT exists at ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+Loading classification head from ./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/head_EuroSAT.pt
+Evaluation Size: 2700
+========== Evaluate backdoor attack on EuroSAT ==========
+  0%|          | 0/85 [00:00<?, ?it/s]  1%|          | 1/85 [00:02<03:51,  2.75s/it]  2%|▏         | 2/85 [00:03<02:00,  1.45s/it]  2%|▏         | 2/85 [00:04<02:54,  2.10s/it]
+Accuracy: 98.44%
+Backdoored accuracy: 0.00% (0/64)
+
+{
+  "datasets": {
+    "EuroSAT": {
+      "clean_acc": 98.4375
+    }
+  },
+  "avg_clean_acc": 98.4375,
+  "target_task": "EuroSAT",
+  "asr": 0.0,
+  "patched_top1": 98.4375,
+  "backdoored_cnt": 0,
+  "non_target_cnt": 64
+}
+
+Saved results to ./results/bmr_multitask_smoke/20260902_203248_KDR_DTK_BMR_EuroSAT_tgt1_L21.json
+[smoke] task=EuroSAT done

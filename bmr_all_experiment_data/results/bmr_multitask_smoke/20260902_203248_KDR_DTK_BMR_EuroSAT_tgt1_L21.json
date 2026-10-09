@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260902_203248",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "EuroSAT"
+  ],
+  "checkpoint_paths": {
+    "EuroSAT": "./tmp/bmr_multitask_smoke_checkpoints/ViT-B-32/EuroSAT_KDR_DTK_BMR_EuroSAT_Tgt_1_L_21/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_EuroSAT_Tgt_1_L_21.npy",
+  "target_task": "EuroSAT",
+  "target_cls": 1,
+  "patch_size": 21,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "EuroSAT": {
+          "clean_acc": 98.4375
+        }
+      },
+      "avg_clean_acc": 98.4375,
+      "target_task": "EuroSAT",
+      "asr": 0.0,
+      "patched_top1": 98.4375,
+      "backdoored_cnt": 0,
+      "non_target_cnt": 64
+    }
+  }
+}

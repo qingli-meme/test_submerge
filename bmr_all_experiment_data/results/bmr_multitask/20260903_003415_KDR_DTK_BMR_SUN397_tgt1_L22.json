@@ -1,0 +1,85 @@
+{
+  "timestamp": "20260903_003415",
+  "attack_type": "KDR_DTK_BMR",
+  "trigger_source": "KDR_DTK",
+  "model": "ViT-B-32",
+  "datasets": [
+    "CIFAR100",
+    "GTSRB",
+    "EuroSAT",
+    "Cars",
+    "SUN397",
+    "PETS"
+  ],
+  "checkpoint_paths": {
+    "CIFAR100": "./checkpoints/ViT-B-32/CIFAR100/finetuned.pt",
+    "GTSRB": "./checkpoints/ViT-B-32/GTSRB/finetuned.pt",
+    "EuroSAT": "./checkpoints/ViT-B-32/EuroSAT/finetuned.pt",
+    "Cars": "./checkpoints/ViT-B-32/Cars/finetuned.pt",
+    "SUN397": "./checkpoints/ViT-B-32/SUN397_KDR_DTK_BMR_SUN397_Tgt_1_L_22/finetuned.pt",
+    "PETS": "./checkpoints/ViT-B-32/PETS/finetuned.pt"
+  },
+  "trigger_path": "./trigger/ViT-B-32/KDR_DTK_SUN397_Tgt_1_L_22.npy",
+  "target_task": "SUN397",
+  "target_cls": 1,
+  "patch_size": 22,
+  "scaling_coef": 0.3,
+  "merge_results": {
+    "ta": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 73.27
+        },
+        "GTSRB": {
+          "clean_acc": 76.38163103721298
+        },
+        "EuroSAT": {
+          "clean_acc": 89.0
+        },
+        "Cars": {
+          "clean_acc": 61.29834597686855
+        },
+        "SUN397": {
+          "clean_acc": 63.158690176322416
+        },
+        "PETS": {
+          "clean_acc": 87.43526846552194
+        }
+      },
+      "avg_clean_acc": 75.09065594265432,
+      "target_task": "SUN397",
+      "asr": 100.0,
+      "patched_top1": 0.2518891687657431,
+      "backdoored_cnt": 19800,
+      "non_target_cnt": 19800
+    },
+    "ties": {
+      "datasets": {
+        "CIFAR100": {
+          "clean_acc": 73.14
+        },
+        "GTSRB": {
+          "clean_acc": 66.2074425969913
+        },
+        "EuroSAT": {
+          "clean_acc": 82.44444444444444
+        },
+        "Cars": {
+          "clean_acc": 63.313020768561124
+        },
+        "SUN397": {
+          "clean_acc": 66.74055415617129
+        },
+        "PETS": {
+          "clean_acc": 86.42681929681112
+        }
+      },
+      "avg_clean_acc": 73.04538021049655,
+      "target_task": "SUN397",
+      "asr": 99.9949494949495,
+      "patched_top1": 0.25692695214105793,
+      "backdoored_cnt": 19799,
+      "non_target_cnt": 19800
+    }
+  }
+}

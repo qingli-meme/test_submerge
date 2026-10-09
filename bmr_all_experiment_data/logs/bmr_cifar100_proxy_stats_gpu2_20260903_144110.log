@@ -1,0 +1,11 @@
+============================================================
+[BMR CIFAR100 proxy stats retrain] gpu=2 start=2026-09-03T14:41:10+08:00
+============================================================
+/home/zlz422/anaconda3/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/data0/BadMerging/src/finetune_kdr_dtk_bmr.py", line 946, in <module>
+    main()
+  File "/data0/BadMerging/src/finetune_kdr_dtk_bmr.py", line 227, in main
+    raise FileNotFoundError(
+FileNotFoundError: ./tmp/checkpoints_bmr_cifar100_proxy_stats/ViT-B-32/zeroshot.pt
